@@ -1,4 +1,23 @@
 // -----------------
+// SMOOTH SCROLLING
+// -----------------
+
+const lenis = new Lenis({
+    duration: 1,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+});
+
+function raf(time) {
+    lenis.raf(time);
+    ScrollTrigger.update();
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+
+
+// -----------------
 // ON-SCROLL EFFECTS
 // -----------------
 
@@ -41,25 +60,151 @@ function reveal(){
   }
 })();
 
-// window.addEventListener('DOMContentLoaded', alwaysshown);
-
-// function alwaysshown(){
-//   var reveals = document.querySelectorAll('.hover-container');
-
-//   for (var i = 0; i < reveals.length; i++) {
-//     var windowHeight = window.innerHeight;
-//     var revealTop = reveals[i].getBoundingClientRect().top;
-//     var revealPoint = 0;
-
-//     if (revealTop < windowHeight - revealPoint) {
-//       reveals[i].classList.add('always-shown');
-//     }
-//   }
-// }
 
 
 // -----------------
-// SCROLL PREVENTION
+// JUMP NAVIGATION
+// -----------------
+
+var navMenu = document.getElementById("nav-menu");
+
+function smoothScroll(target, duration) {
+  navMenu.checked = false;
+  target = document.querySelector(target);
+
+  let offset = parseFloat(getComputedStyle(document.documentElement).fontSize) * 0;
+
+  let targetPosition = target.getBoundingClientRect().top - offset;
+  let startPosition = window.scrollY;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    let timeElapsed = currentTime - startTime;
+
+    let run = ease(timeElapsed, startPosition, targetPosition, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function ease(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t * t * t + b;
+    t -= 2;
+    return -c / 2 * (t * t * t * t - 2) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
+function smoothScrollNoOffset(target, duration) {
+  navMenu.checked = false;
+  target = document.querySelector(target);
+
+  let offset = parseFloat(getComputedStyle(document.documentElement).fontSize) * 0;
+
+  let targetPosition = target.getBoundingClientRect().top - offset;
+  let startPosition = window.scrollY;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    let timeElapsed = currentTime - startTime;
+
+    let run = ease(timeElapsed, startPosition, targetPosition, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function ease(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t * t * t + b;
+    t -= 2;
+    return -c / 2 * (t * t * t * t - 2) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
+function menuOff() {
+  navMenu.checked = false;
+}
+
+var nav0 = document.querySelector('.logomark');
+nav0.addEventListener('click', function() {
+  smoothScrollNoOffset('.scroll-helper-top', 1500);
+});
+
+var nav1 = document.querySelector('.nav-bio');
+nav1.addEventListener('click', function() {
+  smoothScroll('.scroll-helper-bio', 1500);
+});
+
+var nav2 = document.querySelector('.nav-services');
+nav2.addEventListener('click', function() {
+  smoothScroll('.scroll-helper-services', 1500);
+});
+
+var nav3 = document.querySelector('.nav-music');
+nav3.addEventListener('click', function() {
+  smoothScroll('.scroll-helper-music', 1500);
+});
+
+var nav4 = document.querySelector('.nav-faq');
+nav4.addEventListener('click', function() {
+  smoothScroll('.scroll-helper-faq', 1500);
+});
+
+var nav5 = document.querySelector('.nav-contact');
+nav5.addEventListener('click', function() {
+  smoothScrollNoOffset('.scroll-helper-bottom', 1500);
+});
+
+var nav6 = document.querySelector('.nav-music-2');
+nav6.addEventListener('click', function() {
+  smoothScroll('.scroll-helper-music', 1500);
+});
+
+var nav7 = document.querySelector('.nav-music-3');
+nav7.addEventListener('click', function() {
+  smoothScroll('.scroll-helper-music', 1500);
+});
+
+var nav8 = document.querySelector('.nav-music-4');
+nav8.addEventListener('click', function() {
+  smoothScroll('.scroll-helper-music', 1500);
+});
+
+var nav9 = document.querySelector('.nav-contact-1');
+nav9.addEventListener('click', function() {
+  smoothScroll('.scroll-helper-bottom', 1500);
+});
+
+var nav10 = document.querySelector('.nav-services-1');
+nav10.addEventListener('click', function() {
+  smoothScroll('.scroll-helper-services', 1500);
+});
+
+var nav11 = document.querySelector('.nav-contact-2');
+nav11.addEventListener('click', function() {
+  smoothScrollNoOffset('.scroll-helper-bottom', 1500);
+});
+
+
+
+// -----------------
+// DYNAMIC HEADER
+// -----------------
+
+window.addEventListener("scroll", function() {
+  var logomark = document.querySelector('.logomark');
+  logomark.classList.toggle("active", window.scrollY > 600);
+})
+
+
+
+// -----------------
+// HAMBURGER MENU SCROLL PREVENTION
 // -----------------
 
 function preventDefaultForScrollKeys(e) {
@@ -123,12 +268,118 @@ function enableScroll() {
 }
 
 
+
 // -----------------
-// ACCORDIONS
+// FOLD PARALLAX
+// -----------------
+
+(function() {
+  const fold = document.querySelector('.fold');
+  const speed = 0.2; // smaller = slower movement
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    fold.style.transform = `translateY(${scrollY * speed}px)`;
+  });
+})();
+
+
+
+// -----------------
+// LOGO TICKER
+// -----------------
+
+var copy = document.querySelector(".logos").cloneNode(true);
+document.querySelector(".container-logos").appendChild(copy);
+
+const tracks = document.querySelectorAll(".logos");
+const ticker = document.querySelector(".container-logos");
+
+// Create animations for all tracks
+const animations = [...tracks].map(track =>
+  track.animate(
+    [
+      { transform: "translateX(0)" },
+      { transform: "translateX(-100%)" }
+    ],
+    {
+      duration: 20000,
+      iterations: Infinity,
+      easing: "linear"
+    }
+  )
+);
+
+// Smoothly interpolate the playback rate
+function smoothPlaybackRate(animation, targetRate, duration = 500) {
+  const startRate = animation.playbackRate;
+  const startTime = performance.now();
+
+  function update(now) {
+    const t = Math.min((now - startTime) / duration, 1);
+    const eased = t < 0.5 ? 2*t*t : -1 + (4 - 2*t)*t; 
+    // easeInOutQuad
+
+    animation.updatePlaybackRate(startRate + (targetRate - startRate) * eased);
+
+    if (t < 1) requestAnimationFrame(update);
+  }
+
+  requestAnimationFrame(update);
+}
+
+ticker.addEventListener("mouseenter", () => {
+  animations.forEach(anim => smoothPlaybackRate(anim, 0.5, 500)); 
+  // 0.2 = slow rate, 800ms easing
+});
+
+ticker.addEventListener("mouseleave", () => {
+  animations.forEach(anim => smoothPlaybackRate(anim, 1, 500)); 
+  // back to normal at 800ms easing
+});
+
+
+
+// -----------------
+// TESTIMONIAL TICKER
+// -----------------
+
+var copy = document.querySelector(".testimonial-container").cloneNode(true);
+document.querySelector(".testimonial-ticker").appendChild(copy);
+
+const container = document.querySelector(".testimonial-ticker");
+
+function onScroll() {
+  const rect = container.getBoundingClientRect();
+  const viewportHeight = window.innerHeight;
+
+  // How far the container has entered the viewport (0 → 1)
+  const progress = Math.min(
+    Math.max((viewportHeight - rect.top) / (viewportHeight + rect.width), 0),
+    1
+  );
+
+  // How far we can scroll horizontally
+  const maxTranslate =
+    container.scrollWidth - container.clientWidth;
+
+  // Map vertical progress → horizontal movement
+  const translateX = -progress * maxTranslate;
+
+  container.style.transform = `translateX(${translateX}px)`;
+}
+
+window.addEventListener("scroll", onScroll);
+window.addEventListener("resize", onScroll);
+
+
+
+// -----------------
+// REPERTOIRE/FAQ ACCORDIONS
 // -----------------
 
 document.querySelectorAll('.accordion').forEach(acc => {
-  const content = acc.querySelector('.content');
+  const content = acc.querySelector('.accordion-content');
 
   // Remove inline height so we can reapply cleanly
   function clearTransitionEnd() {
@@ -172,287 +423,43 @@ document.querySelectorAll('.accordion').forEach(acc => {
 });
 
 
-// -----------------
-// DYNAMIC HEADER
-// -----------------
-var navMenu = document.getElementById("nav-menu");
-
-window.addEventListener("scroll", function() {
-  var wordmark = document.querySelector('.wordmark');
-  wordmark.classList.toggle("active", window.scrollY > 600);
-})
-
 
 // -----------------
-// NAV BAR SMOOTH SCROLLING
+// PORTFOLIO STAGGERING
 // -----------------
 
-function smoothScroll(target, duration) {
-  navMenu.checked = false;
-  target = document.querySelector(target);
-  let targetPosition = target.getBoundingClientRect().top;
-  let startPosition = window.scrollY;
-  let startTime = null;
+function calculateColumns() {
+  const grid = document.querySelector('.video-grid');
+  if (!grid) return;
 
-  function animation(currentTime) {
-      if(startTime === null) startTime = currentTime;
-      let timeElapsed = currentTime - startTime;
+  const items = [...grid.querySelectorAll('.video')];
+  if (!items.length) return;
 
-      let run = ease(timeElapsed, startPosition, targetPosition, duration);
-      window.scrollTo(0, run);
-      if (timeElapsed < duration) requestAnimationFrame(animation);
-  }
+  const gridWidth = grid.clientWidth;
+  const itemWidth = items[0].getBoundingClientRect().width;
 
-  function ease(t, b, c, d) {
-      t /= d/2;
-      if (t < 1) return c/2*t*t*t*t + b;
-      t -= 2;
-      return -c/2 * (t*t*t*t - 2) + b;
-  };
-          
-  requestAnimationFrame(animation);
+  const cols = Math.max(1, Math.floor(gridWidth / itemWidth));
+
+  applyGridStagger(cols);
 }
 
-function smoothScrollWithAdjustment(target, duration) {
-  navMenu.checked = false;
-  target = document.querySelector(target);
+function applyGridStagger(cols) {
+  const grid = document.querySelector('.video-grid');
+  if (!grid) return;
 
-  // Convert 5em to pixels based on current font size
-  let offset = parseFloat(getComputedStyle(document.documentElement).fontSize) * 5;
+  const items = [...grid.querySelectorAll('.video')];
 
-  let targetPosition = target.getBoundingClientRect().top - offset;
-  let startPosition = window.scrollY;
-  let startTime = null;
+  items.forEach((el, index) => {
+    el.classList.remove('stagger');
 
-  function animation(currentTime) {
-    if (startTime === null) startTime = currentTime;
-    let timeElapsed = currentTime - startTime;
+    const col = (index % cols) + 1;
 
-    let run = ease(timeElapsed, startPosition, targetPosition, duration);
-    window.scrollTo(0, run);
-    if (timeElapsed < duration) requestAnimationFrame(animation);
-  }
-
-  function ease(t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return c / 2 * t * t * t * t + b;
-    t -= 2;
-    return -c / 2 * (t * t * t * t - 2) + b;
-  }
-
-  requestAnimationFrame(animation);
-}
-
-function menuOff() {
-  navMenu.checked = false;
-}
-
-var nav0 = document.querySelector('.nav-top');
-nav0.addEventListener('click', function() {
-  smoothScroll('.scroll-helper-top', 1500);
-});
-
-var nav1 = document.querySelector('.nav-bio');
-nav1.addEventListener('click', function() {
-  smoothScroll('.scroll-helper-bio', 1500);
-});
-
-var nav2 = document.querySelector('.nav-services');
-nav2.addEventListener('click', function() {
-  smoothScroll('.scroll-helper-services', 1500);
-});
-
-var nav3 = document.querySelector('.nav-music');
-nav3.addEventListener('click', function() {
-  smoothScroll('.scroll-helper-music', 1500);
-});
-
-var nav4 = document.querySelector('.nav-faq');
-nav4.addEventListener('click', function() {
-  smoothScroll('.scroll-helper-faq', 1500);
-});
-
-var nav5 = document.querySelector('.nav-contact');
-nav5.addEventListener('click', function() {
-  smoothScroll('.scroll-helper-bottom', 1500);
-});
-
-var nav6 = document.querySelector('.nav-music-2');
-nav6.addEventListener('click', function() {
-  smoothScroll('.scroll-helper-music', 1500);
-});
-
-var nav7 = document.querySelector('.nav-music-3');
-nav7.addEventListener('click', function() {
-  smoothScroll('.scroll-helper-music', 1500);
-});
-
-var nav8 = document.querySelector('.nav-music-4');
-nav8.addEventListener('click', function() {
-  smoothScroll('.scroll-helper-music', 1500);
-});
-
-var nav9 = document.querySelector('.nav-contact-1');
-nav9.addEventListener('click', function() {
-  smoothScroll('.scroll-helper-bottom', 1500);
-});
-
-
-// -----------------
-// PARALLAX
-// -----------------
-
-(function() {
-  const hero = document.querySelector('.hero');
-  const speed = 0.2; // smaller = slower movement
-
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    hero.style.transform = `translateY(${scrollY * speed}px)`;
-  });
-})();
-
-
-// -----------------
-// SMOOTH SCROLLING
-// -----------------
-
-const lenis = new Lenis({
-    duration: 1,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-});
-
-function raf(time) {
-    lenis.raf(time);
-    ScrollTrigger.update();
-    requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
-
-
-
-// -----------------
-// CARDS
-// -----------------
-
-const cards = document.querySelectorAll(".card");
-const mediaQuery = window.matchMedia("(max-width: 65em)");
-
-function updateCardBehavior() {
-  if (mediaQuery.matches) {
-    // Small viewport: all cards active
-    cards.forEach(card => card.classList.add("active"));
-  } else {
-    // Large viewport: only clicked card is active
-    cards.forEach(card => card.classList.remove("active"));
-    const firstCard = document.querySelector(".card");
-    if (firstCard) firstCard.classList.add("active");
-  }
-}
-
-// Handle clicks (only if viewport > 65em)
-cards.forEach(card => {
-  card.addEventListener("click", () => {
-    if (mediaQuery.matches) return; // Ignore clicks on small viewports
-
-    const currentActive = document.querySelector(".card.active");
-    if (currentActive) currentActive.classList.remove("active");
-    card.classList.add("active");
-  });
-});
-
-// Run once on load
-updateCardBehavior();
-
-// Update dynamically when resizing
-mediaQuery.addEventListener("change", updateCardBehavior);
-
-
-
-// -----------------
-// LOGO TICKER
-// -----------------
-
-var copy = document.querySelector(".logos").cloneNode(true);
-document.querySelector(".logo-ticker").appendChild(copy);
-
-const tracks = document.querySelectorAll(".logos");
-const ticker = document.querySelector(".logo-ticker");
-
-// Create animations for all tracks
-const animations = [...tracks].map(track =>
-  track.animate(
-    [
-      { transform: "translateX(0)" },
-      { transform: "translateX(-100%)" }
-    ],
-    {
-      duration: 30000,     // normal speed
-      iterations: Infinity,
-      easing: "linear"
+    // Stagger even-numbered columns
+    if (col % 2 === 0) {
+      el.classList.add('stagger');
     }
-  )
-);
-
-// Smoothly interpolate the playback rate
-function smoothPlaybackRate(animation, targetRate, duration = 500) {
-  const startRate = animation.playbackRate;
-  const startTime = performance.now();
-
-  function update(now) {
-    const t = Math.min((now - startTime) / duration, 1);
-    const eased = t < 0.5 ? 2*t*t : -1 + (4 - 2*t)*t; 
-    // easeInOutQuad
-
-    animation.updatePlaybackRate(startRate + (targetRate - startRate) * eased);
-
-    if (t < 1) requestAnimationFrame(update);
-  }
-
-  requestAnimationFrame(update);
+  });
 }
 
-ticker.addEventListener("mouseenter", () => {
-  animations.forEach(anim => smoothPlaybackRate(anim, 0.5, 500)); 
-  // 0.2 = slow rate, 800ms easing
-});
-
-ticker.addEventListener("mouseleave", () => {
-  animations.forEach(anim => smoothPlaybackRate(anim, 1, 500)); 
-  // back to normal at 800ms easing
-});
-
-
-
-// -----------------
-// TESTIMONIALS
-// -----------------
-
-var copy = document.querySelector(".testimonial-container").cloneNode(true);
-document.querySelector(".testimonial-ticker").appendChild(copy);
-
-const container = document.querySelector(".testimonial-ticker");
-
-function onScroll() {
-  const rect = container.getBoundingClientRect();
-  const viewportHeight = window.innerHeight;
-
-  // How far the container has entered the viewport (0 → 1)
-  const progress = Math.min(
-    Math.max((viewportHeight - rect.top) / (viewportHeight + rect.width), 0),
-    1
-  );
-
-  // How far we can scroll horizontally
-  const maxTranslate =
-    container.scrollWidth - container.clientWidth;
-
-  // Map vertical progress → horizontal movement
-  const translateX = -progress * maxTranslate;
-
-  container.style.transform = `translateX(${translateX}px)`;
-}
-
-window.addEventListener("scroll", onScroll);
-window.addEventListener("resize", onScroll);
+window.addEventListener('load', calculateColumns);
+window.addEventListener('resize', calculateColumns);
