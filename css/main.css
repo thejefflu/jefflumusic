@@ -376,7 +376,7 @@ a {
  }
 
 .logo-ticker .container {
-  padding: 5em 0;
+  padding: 5em 0 4em 0;
   display: flex;
   flex-direction: column;
 }
@@ -671,7 +671,7 @@ a {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 2.25em;
 }
 
 .accordions {
@@ -1033,6 +1033,7 @@ a {
     gap: 2em;
   }
 
+  /*TODO: convert to grid? */
   .card-content {
     min-width: 30%;
   }

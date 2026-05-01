@@ -303,7 +303,7 @@ const animations = [...tracks].map(track =>
       { transform: "translateX(-100%)" }
     ],
     {
-      duration: 20000,
+      duration: 35000,
       iterations: Infinity,
       easing: "linear"
     }
