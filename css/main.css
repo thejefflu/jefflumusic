@@ -920,7 +920,7 @@ a {
 @media screen and (max-aspect-ratio: 7/6) {
   /* h1 converts to editorial vertical layout */
   h1 {
-    font-size: calc(34vh - 7em);
+    font-size: calc(34dvh - 7em);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
     bottom: 1.2em;
@@ -1219,7 +1219,7 @@ a {
   .nav-links {
     position: absolute;
     min-width: 100vw;
-    min-height: 100vh;
+    min-height: 100dvh;
     top: 0;
     left: 0;
     backdrop-filter: blur(15px);
@@ -1365,7 +1365,7 @@ a {
 }
  
 .scroll-helper-bottom {
-  height: 100vh;
+  height: 100dvh;
   width: 0;
   position: absolute;
   bottom: 0;
