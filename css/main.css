@@ -1220,6 +1220,8 @@ a {
   }
 
   /* NAV: links convert to hamburger menu */
+
+  /* TODO: make it so the nav bar expands downwards to form the fullscreen menu */
   .nav-links {
     position: absolute;
     min-width: 100vw;

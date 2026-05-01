@@ -22,6 +22,7 @@ requestAnimationFrame(raf);
 // -----------------
 
 window.addEventListener('scroll', reveal);
+window.addEventListener('resize', reveal);
 
 function reveal(){
   var reveals = document.querySelectorAll('.reveal');
