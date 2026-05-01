@@ -314,7 +314,7 @@ a {
 
 .container-image {
   margin-top: 3.5em;
-  height: calc(100vh - 7em);
+  height: calc(100dvh - 7em);
   position: relative;
   overflow: hidden;
 }
