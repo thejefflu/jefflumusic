@@ -562,7 +562,7 @@ a {
 
 .flex-cards {
   display: flex;
-  gap: 12em;
+  gap: 9em;
 }
 
 .flex-cards .text-lockup {
