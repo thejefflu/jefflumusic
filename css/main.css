@@ -48,19 +48,16 @@ section {
   position: relative;
 }
 
+/* TODO: further simplify code around containers and flexboxes in general */
 .container {
   width: 80%;
   max-width: 65em;
-
+  gap: 4em;
   margin: 0 auto;
 }
 
 section .container {
   padding: 10em 0;
-}
-
-.portfolio .container {
-  padding-bottom: 15em;
 }
 
 .container.lg {
@@ -91,6 +88,7 @@ section .container {
 .fold .container-image img,
 .bio img,
 .review-badge,
+.modal-content,
 .card img,
 .button {
   border-radius: 0.25em;
@@ -110,7 +108,8 @@ video {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: miller-banner, serif;
   font-weight: 200;
 }
@@ -146,9 +145,16 @@ h3 {
   line-height: 1.3;
 }
 
+h4 {
+  letter-spacing: -1px;
+  font-size: 2.5rem;
+  line-height: 1.4;
+}
+
 /* subheadings */
 
 .subheading,
+.subheading a,
 .button {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -174,7 +180,7 @@ a {
   line-height: 1.65;
 }
 
-p .bold {
+b {
   font-weight: 600;
 }
 
@@ -260,6 +266,7 @@ a {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  gap: 0;
 }
 
 .nav input {
@@ -377,6 +384,7 @@ a {
  }
 
 .logo-ticker .container {
+  gap: 0;
   padding: 5em 0 4em 0;
   display: flex;
   flex-direction: column;
@@ -426,7 +434,7 @@ a {
 /* TODO: figure out how to not rely on margin for spacing */
 .logos a {
   height: 3.75em;
-  margin: 0 2.25em;
+  margin: 0 2.5em;
   transition: var(--ease-slow);
 }
 
@@ -456,7 +464,7 @@ a {
 .headings {
   display: flex;
   flex-direction: column;
-  gap: 0.75em;
+  gap: 1em;
 }
 
 .body {
@@ -497,6 +505,7 @@ a {
   background-image: url("/assets/imgs/4-testimonials/bg.jpg");
   background-size: cover;
   background-position: center;
+  padding: 8.5em 0;
 }
 
 .review-badge {
@@ -518,7 +527,7 @@ a {
 .review-badge .text-lockup {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.675em;
 }
 
 .review-badge .text-lockup p {
@@ -528,13 +537,13 @@ a {
 .testimonial-ticker,
 .testimonial-container {
   display: flex;
-  gap: 6em;
+  gap: 5.5em;
 }
 
 .testimonial {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1.5em;
   text-align: center;
 }
 
@@ -547,12 +556,160 @@ a {
   letter-spacing: -2px;
 }
 
+.testimonial .text-lockup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875em;
+}
+
 .stars {
   word-spacing: 0.1em;
 }
 
 .stars i {
   font-size: 1.125rem;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: var(--ease-medium);
+  opacity: 0;
+}
+
+.modal.active {
+  visibility: visible;
+  pointer-events: auto;
+
+  opacity: 1;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(43, 50, 56,0.8);
+  backdrop-filter: blur(15px);
+}
+
+.modal-outer {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  z-index: 2;
+
+  transition: var(--ease-medium);
+  transform: translateY(3em);
+}
+
+.modal.active .modal-outer {
+  transform: translateY(0);
+}
+
+.modal-content {
+  position: relative;
+  background: var(--bg-light);
+  padding: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: min(calc(100vw - 6.5em), 22em);
+  height: min(85dvh, 35em);
+}
+
+.review,
+.info,
+.review-number {
+  transition: var(--ease-fast);
+  z-index: 1;
+}
+
+.review.right,
+.info.right,
+.review-number.right {
+  transform: translateX(1.5em);
+  opacity: 0;
+}
+
+.review.left,
+.info.left,
+.review-number.left {
+  transform: translateX(-1.5em);
+  opacity: 0;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75em;
+  align-items: flex-start;
+}
+
+.ad-platform-container {
+  height: 1.5em;
+}
+
+.ad-platform {
+  width: 50%;
+  height: auto;
+  transition: var(--ease-fast);
+}
+
+.review-body {
+  white-space: pre-line;
+}
+
+.info {
+  display: flex;
+  gap: 1.25em;
+  align-items: center;
+}
+
+.info .client-photo {
+  height: 3.5em;
+  width: 3.5em;
+  border-radius: 100%;
+}
+
+.info .text-lockup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.quotes {
+  position: absolute;
+  right: -0.25em;
+  bottom: 7em;
+}
+
+.modal-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.modal-arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 9em;
+  align-items: center;
+}
+
+.modal-arrows p {
+  color: var(--bg-light);
+}
+
+.modal-nav img {
+  cursor: pointer;
+  transition: var(--ease-fast);
 }
 
 
@@ -576,6 +733,7 @@ a {
   display: flex;
   gap: 0.75em;
   margin-top: 1.25em;
+  max-width: 100em;
 }
 
 .card {
@@ -618,7 +776,6 @@ a {
 .guarantee .container {
   display: flex;
   flex-direction: column;
-  gap: 4em;
 }
 
 .features {
@@ -646,7 +803,6 @@ a {
 .faq .container {
   display: flex;
   flex-direction: column;
-  gap: 4em;
 }
 
 .repertoire h2 {
@@ -754,7 +910,6 @@ a {
 .portfolio .container {
   display: flex;
   flex-direction: column;
-  gap: 4em;
 }
 
 .video-grid {
@@ -763,6 +918,7 @@ a {
   gap: 0.75em;
   row-gap: 2em;
   justify-content: space-between;
+  padding-bottom: 10em;
 }
 
 .video {
@@ -771,7 +927,7 @@ a {
   gap: 0.5em;
 }
 
-.video.stagger {
+.video:nth-child(even) {
   transform: translateY(5em);
 }
 
@@ -883,14 +1039,23 @@ a {
   .best-of img:focus,
   .logos a:hover,
   .logos a:focus,
+  .ad-platform-container img:hover,
+  .ad-platform-container img:focus,
   .social:hover,
   .social:focus {
     transform: scale(1.05);
+  }
+
+  .modal-nav img:hover,
+  .modal-nav img:focus {
+    transform: scale(1.15);
   }
   
   .logomark:active,
   .best-of img:active,
   .logos a:active,
+  .ad-platform-container img:active,
+  .modal-nav img:active,
   .social:active {
     transform: scale(0.95);
   }
@@ -930,6 +1095,13 @@ a {
     top: unset;
     width: unset;
     word-spacing: 0;
+    transition: var(--ease-medium);
+  }
+
+  /* FOLD: image shifts to accomodate h1 */
+  .fold .container-image img {
+    object-position: 53% 50%;
+    transition: var(--ease-medium);
   }
 }
 
@@ -987,6 +1159,14 @@ a {
   /* PORTFOLIO: collapses to 3 columns */
   .video-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .video:nth-child(even) {
+    transform: none;
+  }
+
+  .video:nth-child(3n - 1) {
+    transform: translateY(5em);
   }
 }
 
@@ -1067,6 +1247,14 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .video:nth-child(3n - 1) {
+    transform: none;
+  }
+
+  .video:nth-child(even) {
+    transform: translateY(5em);
+  }
+
   /* CONTACT: ditch gradient overlay and right-aligned layout */
   .contact {
     background-image: linear-gradient(270deg, rgba(43, 50, 56, 0.95) 0%, rgba(43, 50, 56, 0.95) 100%), url("/assets/imgs/8-contact/bg.jpg");
@@ -1120,11 +1308,6 @@ a {
     font-size: 0.8125rem;
   }
 
-  /* FOLD: image shifts to accomodate h1 */
-  .fold img {
-    object-position: 53% 50%;
-  }
-
   /* BIO: half image module converts to vertical layout */
   .flex-half-image {
     flex-direction: column;
@@ -1150,8 +1333,9 @@ a {
     gap: 1.5em;
   }
 
-  .review-badge .text-lockup p {
+  .review-badge .text-lockup .subheading {
     text-wrap: wrap;
+    max-width: 12ch;
   }
 
   /* TESTIMONIALS: ditch ticker scrolling; convert to vertical layout */

@@ -376,6 +376,226 @@ window.addEventListener("resize", onScroll);
 
 
 // -----------------
+// TESTIMONIAL MODAL
+// -----------------
+
+const reviews = [
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
+    adPlatformLink: "https://share.google/Ypp3j0W9zhpxL3Kbz",
+    body: "I hired Jeff to play at my daughter’s 15th birthday. Prior to the party, Jeff was very communicative and inquired on the type of music we’d like for him to perform. His professionalism is on another level. He was kind and arrived early to set up. His attire was perfect for the event and his demeanor was perfect as well. This was all prior to performing.\n\nJeff arrived ready to perform with a wireless speaker and his viola. The moment he began playing, my guests were blown away. I have received so many compliments on my party due to Jeff making it so special. My daughter was so excited to have him perform and he did not disappoint. We will hire Jeff for all our future events because we were beyond satisfied! Jeff has true talent, professionalism, presence, and is so kind.",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/vanessa.jpg",
+    name: "Vanessa",
+    metadata: "Dec 2025 ∙ Fontana, CA"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
+    adPlatformLink: "https://www.zola.com/wedding-vendors/wedding-bands-djs/jeff-lu-violist",
+    body: "We hired Jeff Lu to perform at our wedding ceremony and cocktail hour, and he absolutely made those moments feel magical. From our first conversation, Jeff was easy to work with and responded quickly to every question we had. His talent on the viola is undeniable—he plays with a grace that our guests couldn't stop talking about. The music he chose created the perfect atmosphere without being distracting, and honestly, it elevated the whole vibe of our day. If you're looking for a musician who is both professional and genuinely passionate about what he does, Jeff is your person. We're so grateful he was part of our celebration.",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/anais.jpg",
+    name: "Anais",
+    metadata: "May 2026 ∙ Simi Valley, CA"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/the-bash.png",
+    adPlatformLink: "https://www.thebash.com/violin/jeff",
+    body: "Jeff was absolutely amazing. He took our taste in music into consideration, made a killer set list, seamlessly set up for the event, and gave a wonderful performance! He was very easy to communicate and coordinate with and is a talented violist. All of our guests thought he made the ambiance even more special and left a lasting impression on everyone. I would recommend Jeff for any event one would want to elevate the atmosphere for.",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/giselle.jpg",
+    name: "Giselle",
+    metadata: "Oct 2025 ∙ Anaheim, CA"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/gigsalad.png",
+    adPlatformLink: "https://www.gigsalad.com/jeff_lu_violist_glendora",
+    body: "Jeff Lu performed as a violist at our daughter’s wedding. Working with Jeff was an outstanding experience. He was not only prompt, but early. He performed beautifully, and was fully aware of and sensitive to the surroundings and occasion. His music was first class, and his demeanor and cheerful presence added a great deal to the ceremonies. I highly recommend Jeff for his viola skills to anyone needing music for their events.",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/yu-fahn.jpg",
+    name: "Yu-Fahn",
+    metadata: "Sep 2025 ∙ Soquel, CA"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/yelp.png",
+    adPlatformLink: "https://www.yelp.com/biz/jeff-lu-wedding-and-event-violist-glendora-4?osq=Jeff+Lu",
+    body: "We hired Jeff to play viola for our wedding ceremony and cocktail hour and could not have been happier. He was responsive, flexible, and on top of every detail from start to finish. The highlight for our guests was a custom Top Gun Anthem cover for the bride's entrance that was exactly as cool as it sounds and a massive hit with everyone there. Highly recommend him for any wedding or event!",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/drew.jpg",
+    name: "Drew",
+    metadata: "Apr 2026 ∙ Temecula, CA"
+  }
+];
+
+const modal = document.getElementById("testimonialModal");
+const review = document.querySelector(".review");
+const info = document.querySelector(".info");
+
+const reviewAdPlatform = document.querySelector(".ad-platform");
+const reviewAdPlatformLink = document.querySelector(".ad-platform-link");
+const reviewBody = document.querySelector(".review-body");
+const reviewName = document.querySelector(".review-name");
+const reviewClientPhoto = document.querySelector(".client-photo");
+const reviewMetadata = document.querySelector(".review-metadata");
+const reviewNumber = document.querySelector(".review-number");
+
+let currentReview = 0;
+
+let isAnimating = false;
+
+function renderReviewNoAnimation(index) {
+  reviewAdPlatform.src = reviews[index].adPlatform;
+  reviewAdPlatformLink.href = reviews[index].adPlatformLink;
+  reviewBody.textContent = reviews[index].body;
+  reviewName.textContent = reviews[index].name;
+  reviewClientPhoto.src = reviews[index].clientPhoto;
+  reviewMetadata.textContent = reviews[index].metadata;
+  reviewNumber.textContent = "0" + (index+1) + " / 0" + reviews.length;
+}
+
+function renderReviewFromRight(index) {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  // old review exits left
+  review.classList.add("left");
+  info.classList.add("left");
+  reviewNumber.classList.add("left");
+
+  setTimeout(() => {
+    // update content after exit    
+    reviewAdPlatform.src = reviews[index].adPlatform;
+    reviewAdPlatformLink.href = reviews[index].adPlatformLink;
+    reviewBody.textContent = reviews[index].body;
+    reviewName.textContent = reviews[index].name;
+    reviewClientPhoto.src = reviews[index].clientPhoto;
+    reviewMetadata.textContent = reviews[index].metadata;
+    reviewNumber.textContent = "0" + (index+1) + " / 0" + reviews.length;
+
+    // remove exit state
+    review.classList.remove("left");
+    info.classList.remove("left");
+    reviewNumber.classList.remove("left");
+
+    // disable transition temporarily
+    review.style.transition = "none";
+    info.style.transition = "none";
+    reviewNumber.style.transition = "none";
+
+    // position new review offscreen right instantly
+    review.classList.add("right");
+    info.classList.add("right");
+    reviewNumber.classList.add("right");
+
+    requestAnimationFrame(() => {
+      // re-enable transition AFTER browser paints
+      review.style.transition = "";
+      info.style.transition = "";
+      reviewNumber.style.transition = "";
+
+      requestAnimationFrame(() => {
+        // animate to center
+        review.classList.remove("right");
+        info.classList.remove("right");
+        reviewNumber.classList.remove("right");
+      });
+    });
+
+    setTimeout(() => {
+      isAnimating = false;
+    }, 375);
+
+  }, 375);
+}
+
+function renderReviewFromLeft(index) {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  // old review exits right
+  review.classList.add("right");
+  info.classList.add("right");
+  reviewNumber.classList.add("right");
+
+  setTimeout(() => {
+    // update content after exit
+    reviewAdPlatform.src = reviews[index].adPlatform;
+    reviewAdPlatformLink.href = reviews[index].adPlatformLink;
+    reviewBody.textContent = reviews[index].body;
+    reviewName.textContent = reviews[index].name;
+    reviewClientPhoto.src = reviews[index].clientPhoto;
+    reviewMetadata.textContent = reviews[index].metadata;
+    reviewNumber.textContent = "0" + (index+1) + " / 0" + reviews.length;
+
+    // remove exit state
+    review.classList.remove("right");
+    info.classList.remove("right");
+    reviewNumber.classList.remove("right");
+
+    // disable transition temporarily
+    review.style.transition = "none";
+    info.style.transition = "none";
+    reviewNumber.style.transition = "none";
+
+    // position new review offscreen left instantly
+    review.classList.add("left");
+    info.classList.add("left");
+    reviewNumber.classList.add("left");
+
+    requestAnimationFrame(() => {
+      // re-enable transition AFTER browser paints
+      review.style.transition = "";
+      info.style.transition = "";
+      reviewNumber.style.transition = "";
+
+      requestAnimationFrame(() => {
+        // animate to center
+        review.classList.remove("left");
+        info.classList.remove("left");
+        reviewNumber.classList.remove("left");
+      });
+    });
+
+    setTimeout(() => {
+      isAnimating = false;
+    }, 375);
+
+  }, 375);
+}
+
+function openModal(index) {
+  currentReview = index;
+  renderReviewNoAnimation(currentReview);
+  modal.classList.add("active");
+}
+
+function closeModal() {
+  modal.classList.remove("active");
+}
+
+document.querySelectorAll(".review-trigger").forEach(button => {
+  button.addEventListener("click", () => {
+    openModal(Number(button.dataset.review));
+  });
+});
+
+document.getElementById("prevReview").addEventListener("click", () => {
+  currentReview = (currentReview - 1 + reviews.length) % reviews.length;
+  renderReviewFromLeft(currentReview);
+});
+
+document.getElementById("nextReview").addEventListener("click", () => {
+  currentReview = (currentReview + 1) % reviews.length;
+  renderReviewFromRight(currentReview);
+});
+
+document.querySelector(".close-modal").addEventListener("click", closeModal);
+document.querySelector(".modal-overlay").addEventListener("click", closeModal);
+
+document.addEventListener("keydown", e => {
+  if (e.key === "ArrowLeft") prevReview.click();
+  if (e.key === "ArrowRight") nextReview.click();
+  if (e.key === "Escape") closeModal();
+});
+
+
+
+// -----------------
 // REPERTOIRE/FAQ ACCORDIONS
 // -----------------
 
@@ -424,43 +644,44 @@ document.querySelectorAll('.accordion').forEach(acc => {
 });
 
 
+// TODO: ditch this in lieu of static CSS breakpoints
 
 // -----------------
 // PORTFOLIO STAGGERING
 // -----------------
 
-function calculateColumns() {
-  const grid = document.querySelector('.video-grid');
-  if (!grid) return;
+// function calculateColumns() {
+//   const grid = document.querySelector('.video-grid');
+//   if (!grid) return;
 
-  const items = [...grid.querySelectorAll('.video')];
-  if (!items.length) return;
+//   const items = [...grid.querySelectorAll('.video')];
+//   if (!items.length) return;
 
-  const gridWidth = grid.clientWidth;
-  const itemWidth = items[0].getBoundingClientRect().width;
+//   const gridWidth = grid.clientWidth;
+//   const itemWidth = items[0].getBoundingClientRect().width;
 
-  const cols = Math.max(1, Math.floor(gridWidth / itemWidth));
+//   const cols = Math.max(1, Math.floor(gridWidth / itemWidth));
 
-  applyGridStagger(cols);
-}
+//   applyGridStagger(cols);
+// }
 
-function applyGridStagger(cols) {
-  const grid = document.querySelector('.video-grid');
-  if (!grid) return;
+// function applyGridStagger(cols) {
+//   const grid = document.querySelector('.video-grid');
+//   if (!grid) return;
 
-  const items = [...grid.querySelectorAll('.video')];
+//   const items = [...grid.querySelectorAll('.video')];
 
-  items.forEach((el, index) => {
-    el.classList.remove('stagger');
+//   items.forEach((el, index) => {
+//     el.classList.remove('stagger');
 
-    const col = (index % cols) + 1;
+//     const col = (index % cols) + 1;
 
-    // Stagger even-numbered columns
-    if (col % 2 === 0) {
-      el.classList.add('stagger');
-    }
-  });
-}
+//     // Stagger even-numbered columns
+//     if (col % 2 === 0) {
+//       el.classList.add('stagger');
+//     }
+//   });
+// }
 
-window.addEventListener('load', calculateColumns);
-window.addEventListener('resize', calculateColumns);
+// window.addEventListener('load', calculateColumns);
+// window.addEventListener('resize', calculateColumns);
