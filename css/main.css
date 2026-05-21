@@ -918,7 +918,7 @@ a {
   gap: 0.75em;
   row-gap: 2em;
   justify-content: space-between;
-  padding-bottom: 10em;
+  padding-bottom: 6em;
 }
 
 .video {
@@ -1099,9 +1099,13 @@ a {
   }
 
   /* FOLD: image shifts to accomodate h1 */
+  .fold .container-image,
+  .fold .container-image img {
+    transition: var(--ease-medium);
+  }
+
   .fold .container-image img {
     object-position: 53% 50%;
-    transition: var(--ease-medium);
   }
 }
 
