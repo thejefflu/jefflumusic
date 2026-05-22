@@ -621,7 +621,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   width: min(calc(100vw - 6.5em), 22em);
-  height: min(85dvh, 35em);
+  height: min(calc(85dvh - 6em), 35em);
 }
 
 .review,
@@ -650,6 +650,7 @@ a {
   flex-direction: column;
   gap: 1.75em;
   align-items: flex-start;
+  height: calc(100% - 5em);
 }
 
 .ad-platform-container {
@@ -662,8 +663,14 @@ a {
   transition: var(--ease-fast);
 }
 
+.review-body-container {
+  max-height: calc(100% - 5em);
+  /* overflow-y: scroll; */
+}
+
 .review-body {
   white-space: pre-line;
+  text-overflow: ellipsis;
 }
 
 .info {

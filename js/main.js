@@ -391,7 +391,7 @@ const reviews = [
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
     adPlatformLink: "https://www.zola.com/wedding-vendors/wedding-bands-djs/jeff-lu-violist",
-    body: "We hired Jeff Lu to perform at our wedding ceremony and cocktail hour, and he absolutely made those moments feel magical. From our first conversation, Jeff was easy to work with and responded quickly to every question we had. His talent on the viola is undeniable—he plays with a grace that our guests couldn't stop talking about. The music he chose created the perfect atmosphere without being distracting, and honestly, it elevated the whole vibe of our day. If you're looking for a musician who is both professional and genuinely passionate about what he does, Jeff is your person. We're so grateful he was part of our celebration.",
+    body: "We hired Jeff Lu to perform at our wedding ceremony and cocktail hour, and he absolutely made those moments feel magical. From our first conversation, Jeff was easy to work with and responded quickly to every question we had. His talent on the viola is undeniable—he plays with a grace that our guests couldn't stop talking about. The music he chose created the perfect atmosphere without being distracting and elevated the whole vibe of our day. If you're looking for a musician who is both professional and genuinely passionate about what he does, Jeff is your person. We're so grateful he was part of our celebration.",
     clientPhoto: "assets/imgs/4-testimonials/client-photos/anais.jpg",
     name: "Anais",
     metadata: "May 2026 ∙ Simi Valley, CA"
