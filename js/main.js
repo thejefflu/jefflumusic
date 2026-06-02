@@ -413,6 +413,14 @@ const reviews = [
     metadata: "Sep 2025 ∙ Soquel, CA"
   },
   {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
+    adPlatformLink: "https://share.google/Ypp3j0W9zhpxL3Kbz",
+    body: "Jeff was absolutely AMAZING!! He performed during the ceremony and cocktail hour of our wedding. His performance was beautiful, fun and entertaining for our guests. He was wonderful to work with throughout the whole planning process and communicated throughout the planning process. Our guests still talk about how amazing he was, we couldn't be happier! Highly recommend Jeff!",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/haley.jpg",
+    name: "Haley",
+    metadata: "Apr 2026 ∙ Vista, CA"
+  },
+  {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/yelp.png",
     adPlatformLink: "https://www.yelp.com/biz/jeff-lu-wedding-and-event-violist-glendora-4?osq=Jeff+Lu",
     body: "We hired Jeff to play viola for our wedding ceremony and cocktail hour and could not have been happier. He was responsive, flexible, and on top of every detail from start to finish. The highlight for our guests was a custom Top Gun Anthem cover for the bride's entrance that was exactly as cool as it sounds and a massive hit with everyone there. Highly recommend him for any wedding or event!",
