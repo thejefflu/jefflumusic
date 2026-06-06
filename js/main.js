@@ -413,6 +413,14 @@ const reviews = [
     metadata: "Sep 2025 ∙ Soquel, CA"
   },
   {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
+    adPlatformLink: "https://www.zola.com/wedding-vendors/wedding-bands-djs/jeff-lu-violist",
+    body: "We hired Jeff Lu to play violin at our daughter's quinceañera and couldn't have been happier with our choice. Even though it was his first quinceañera, Jeff brought such professionalism and elegance to the event that you would never have known it. He was willing to rehearse with an opera singer the same day, which showed how dedicated he was to making our celebration special. Jeff stayed responsive throughout our planning process and handled all our last-minute requests with a great attitude. He looked sharp, played beautifully, and connected with our guests in a way that made the whole day feel memorable. We're so grateful to Jeff for bringing such grace and care to our daughter's milestone.",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/sarah.jpg",
+    name: "Sarah",
+    metadata: "May 2026 ∙ Fontana, CA"
+  },
+  {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
     adPlatformLink: "https://share.google/Ypp3j0W9zhpxL3Kbz",
     body: "Jeff was absolutely AMAZING!! He performed during the ceremony and cocktail hour of our wedding. His performance was beautiful, fun and entertaining for our guests. He was wonderful to work with throughout the whole planning process and communicated throughout the planning process. Our guests still talk about how amazing he was, we couldn't be happier! Highly recommend Jeff!",
