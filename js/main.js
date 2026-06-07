@@ -435,6 +435,22 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/drew.jpg",
     name: "Drew",
     metadata: "Apr 2026 ∙ Temecula, CA"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
+    adPlatformLink: "https://www.zola.com/wedding-vendors/wedding-bands-djs/jeff-lu-violist",
+    body: "Jeff was wonderful and we highly recommend him! He's an amazing violist. My wife and I just got married very recently in May and Jeff played during our ceremony; he played beautifully. We even asked him to learn a new song for us that's totally foreign to him since it's not English. He nailed it! He's also very responsive to text and easy to communicate with. Thank you Jeff.",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/lilet.jpg",
+    name: "Lilet",
+    metadata: "May 2026 ∙ Corona del Mar, CA"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/yelp.png",
+    adPlatformLink: "https://www.yelp.com/biz/jeff-lu-wedding-and-event-violist-glendora-4?osq=Jeff+Lu",
+    body: "I found him on The Bash and he was my first person I booked. I was hesitant at first because I've never used it nor has any of my friends used it before. It worked out in my favor. I booked Jeff for my wedding on 11/08/25 in Indian Wells. Prior before the wedding, we had excellent communication. He has so many songs to choose from that it makes it so hard to narrow it down. He was a hit during our dinner time. Would keep him in mind for other events.",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/mary.jpg",
+    name: "Mary",
+    metadata: "Nov 2025 ∙ Indian Wells, CA"
   }
 ];
 
