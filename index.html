@@ -31,12 +31,12 @@
       <nav class="nav">
         <div class="container lg">
           <!-- logomark -->
-          <a class="logomark"  onclick="enableScroll()">
+          <a class="logomark">
             <img src="./assets/imgs/0-nav/logomark.png">
           </a>
           <!-- hamburger menu -->
           <input type="checkbox" id="nav-menu">
-          <label for="nav-menu" class="nav-btn" onclick="toggleScroll()">
+          <label for="nav-menu" class="nav-btn">
               <i></i>
               <i></i>
               <i></i>
@@ -66,13 +66,13 @@
             <div class="best-of">
               <p class="subheading sm">Awarded Best Of</p>
               <div class="best-of-inner">
-                <a href="https://www.zola.com/wedding-vendors/wedding-bands-djs/jeff-lu-violist" target="_blank">
+                <a href="https://www.zola.com/wedding-vendors/wedding-bands-djs/jefflumusic" target="_blank">
                   <img src="assets/imgs/1-fold/zola.png">
                 </a>
-                <a href="https://www.thebash.com/violin/jeff" target="_blank">
+                <a href="https://www.thebash.com/violin/jefflumusic" target="_blank">
                   <img src="assets/imgs/1-fold/the-bash.png">
                 </a>
-                <a href="https://www.gigsalad.com/jeff_lu_violist_glendora" target="_blank">
+                <a href="https://www.gigsalad.com/jeff_lu_music_glendora" target="_blank">
                   <img src="assets/imgs/1-fold/gigsalad.png">
                 </a>
               </div>
@@ -89,20 +89,20 @@
               <a href="https://schoolofmusic.ucla.edu" target="_blank" class="reveal">
                 <img src="/assets/imgs/2-logo-ticker/ucla-hasom.png">
               </a>
-              <a href="https://disneyland.disney.go.com/destinations/disneyland/" target="_blank" class="reveal">
-                <img src="/assets/imgs/2-logo-ticker/disneyland-park.png">
-              </a>
               <a href="https://www.instagram.com/yelpla/" target="_blank" class="reveal">
                 <img src="/assets/imgs/2-logo-ticker/yelp.png">
-              </a>
-              <a href="https://www.rosebowlstadium.com" target="_blank" class="reveal">
-                <img src="/assets/imgs/2-logo-ticker/rose-bowl.png">
               </a>
               <a href="https://www.sofistadium.com" target="_blank" class="reveal">
                 <img src="/assets/imgs/2-logo-ticker/sofi-stadium.png">
               </a>
+              <a href="https://www.rosebowlstadium.com" target="_blank" class="reveal">
+                <img src="/assets/imgs/2-logo-ticker/rose-bowl.png">
+              </a>
               <a href="https://www.ncaa.com/march-madness-live/watch" target="_blank" class="reveal">
                 <img src="/assets/imgs/2-logo-ticker/ncaa-march-madness.png">
+              </a>
+              <a href="https://disneyland.disney.go.com/destinations/disneyland/" target="_blank" class="reveal">
+                <img src="/assets/imgs/2-logo-ticker/disneyland-park.png">
               </a>
               <a href="https://pasadenasymphony-pops.org" target="_blank" class="reveal">
                 <img src="/assets/imgs/2-logo-ticker/pasadena-symphony-pops.png">
@@ -153,7 +153,7 @@
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
               </p>
-              <p class="subheading">Based on 21 reviews</br></p>
+              <p class="subheading">Based on 25 reviews</br></p>
             </div>
           </div>
           <div class="testimonial-ticker dark">
@@ -167,8 +167,8 @@
                   <i class="fa-solid fa-star"></i>
                 </p>
                 <div class="text-lockup">
-                  <h2>“First-class”</h2>
-                  <p class="subheading">Yu-Fahn ∙ <a class="inline review-trigger" data-review="3" onclick="toggleScroll()">Read More</a></p>
+                  <h2>“Unforgettable”</h2>
+                  <p class="subheading">George ∙ <a class="inline review-trigger" data-review="0">Read More</a></p>
                 </div>
               </div>
               <div class="testimonial reveal">
@@ -181,7 +181,7 @@
                 </p>
                 <div class="text-lockup">
                   <h2>“Breathtaking”</h2>
-                  <p class="subheading">Vanessa ∙ <a class="inline review-trigger" data-review="0" onclick="toggleScroll()">Read More</a></p>
+                  <p class="subheading">Vanessa ∙ <a class="inline review-trigger" data-review="1">Read More</a></p>
                 </div>
               </div>
               <div class="testimonial reveal">
@@ -194,7 +194,7 @@
                 </p>
                 <div class="text-lockup">
                   <h2>“Magical”</h2>
-                  <p class="subheading">Anais ∙ <a class="inline review-trigger" data-review="1" onclick="toggleScroll()">Read More</a></p>
+                  <p class="subheading">Anais ∙ <a class="inline review-trigger" data-review="2">Read More</a></p>
                 </div>
               </div>
               <div class="testimonial reveal">
@@ -207,15 +207,15 @@
                 </p>
                 <div class="text-lockup">
                   <h2>“Brilliant”</h2>
-                  <p class="subheading">Giselle ∙ <a class="inline review-trigger" data-review="2" onclick="toggleScroll()">Read More</a></p>
+                  <p class="subheading">Giselle ∙ <a class="inline review-trigger" data-review="3">Read More</a></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- TODO: fix blur transition, disable scrolling, text cutoff, ticker alignment -->
-        <div class="modal" id="testimonialModal">
+        <!-- TODO: fix blur transition -->
+        <div class="modal" id="testimonialModal" data-lenis-prevent>
           <div class="modal-overlay"></div>
           <div class="modal-outer">
             <div class="modal-content">
@@ -227,6 +227,7 @@
                 </div>
                 <div class="review-body-container">
                   <p class="review-body"></p>
+                  <p class="review-note"></p>
                 </div>
               </div>
               <div class="info">
@@ -256,7 +257,7 @@
           <div class="flex-cards">
             <div class="text-lockup">
               <h2 class="reveal">Now Serving</h2>
-              <a class="nav-contact-2 button reveal" onclick="enableScroll()">Get a Quote</a>
+              <a class="nav-contact-2 button reveal">Get a Quote</a>
             </div>
             <div class="cards">
               <div class="card">
@@ -275,7 +276,7 @@
                     <p class="subheading">Events</p>
                     <p>Soundtracks for corporate events, parties, proposals, and everything in between.</p>
                   </div>                    
-                  <p>Starting at $350/hr</p>
+                  <p>Starting at $400/hr</p>
                 </div>
                 <img src="./assets/imgs/5-services/events.jpg" class="reveal">
               </div>
@@ -300,8 +301,7 @@
           <div class="features">
             <div class="feature reveal">
               <p class="subheading">Custom Setlist</p>
-              <p>Choose from my <a class="nav-music-2 inline" onclick="enableScroll()">repertoire</a> of 160+ songs <em>(add'l fee applies for outside requests)</em>.</p>
-              <!-- repertoire count as of 05/12/2026: 166 -->
+              <p>Choose from my <a class="nav-music-2 inline">repertoire</a> of 170+ songs <em>(add'l fee applies for outside requests)</em>.</p> <!-- repertoire count as of 06/17/2026: 171 -->
             </div>
             <div class="feature reveal">
               <p class="subheading">Rehearsal Recordings</p>
@@ -348,8 +348,6 @@
                       A Thousand Years ∙ Christina Perri<br>
                       All I Ask ∙ Adele<br>
                       All of Me ∙ John Legend<br>
-                      <!-- Better Together ∙ Jack Johnson<br> -->
-                      <!-- Bewitched ∙ Laufey<br> -->
                       Budapest ∙ George Ezra<br>
                       Cherry Wine ∙ Grentperez<br>
                       Dance the Night ∙ Dua Lipa<br>
@@ -360,14 +358,11 @@
                       Fake Love ∙ BTS<br>
                       Give Me Everything ∙ Pitbull, AFROJACK, and Ne-Yo ft. Nayer<br>
                       Golden ∙ Ejae, Audrey Nuna, and Rei Ami<br>
-                      <!-- Gravity ∙ John Mayer<br> -->
                       Haven't Met You Yet ∙ Michael Bublé<br>
-                      <!-- Heart Attack ∙ Wild Rivers<br> -->
-                      <!-- I Get to Love You ∙ Ruelle<br> -->
+                      I Get to Love You ∙ Ruelle<br>
                       I Wish You Love ∙ Laufey<br>
                       If I Ain't Got You ∙ Alicia Keys<br>
                       Ikaw ∙ Yeng Constantino<br>
-                      <!-- I'm Yours ∙ Jason Mraz<br> -->
                       In My Blood ∙ Shawn Mendes<br>
                       Int'l Players Anthem (I Choose You) ∙ UGK and Outkast<br>
                       Just the Way You Are ∙ Bruno Mars<br>
@@ -409,6 +404,7 @@
                       Yellow ∙ Coldplay<br>
                       You Belong with Me ∙ Taylor Swift<br>
                       You're Gonna Live Forever in Me ∙ John Mayer<br>
+                      You're Still the One ∙ Teddy Swims<br>
                       Yours to Keep ∙ Grentperez<br>
                     </p>
                   </div>
@@ -429,9 +425,9 @@
                       Can You Feel the Love Tonight ∙ Elton John<br>
                       Creep ∙ Radiohead<br>
                       Dancing Queen ∙ ABBA<br>
-                      <!-- Don't Go Breaking My Heart ∙ Elton John and Kiki Dee<br> -->
                       Don't Stop Believin' ∙ Journey<br>
                       Don't Stop Me Now ∙ Queen<br>
+                      Dreaming of You ∙ Selena<br>
                       Every Breath You Take ∙ The Police<br>
                       Friends in Low Places ∙ Garth Brooks<br>
                       Forever Young ∙ Alphaville<br>
@@ -477,6 +473,7 @@
                       Sweet Caroline ∙ Neil Diamond<br>
                       The Girl from Ipanema ∙ Frank Sinatra and Antônio Carlos Jobim<br>
                       The Way You Look Tonight ∙ Frank Sinatra<br>
+                      Unchained Melody ∙ The Righteous Brothers<br>
                       What a Wonderful World ∙ Louis Armstrong<br>
                       You Make Me Feel So Young ∙ Frank Sinatra
                     </p>
@@ -504,7 +501,6 @@
                       <b>Beauty and the Beast</b><br>
                       Be Our Guest<br>
                       Beauty and the Beast
-                      <!-- Belle -->
                     </p>
                     <p>
                       <b>Bridgerton</b><br>
@@ -530,7 +526,6 @@
                     <p>
                       <b>The Greatest Showman</b><br>
                       A Million Dreams<br>
-                      <!-- Come Alive<br> -->
                       From Now On<br>
                       Never Enough<br>
                       Rewrite the Stars<br>
@@ -590,7 +585,6 @@
                     <p>
                       <b>Singin' in the Rain</b><br>
                       All I Do Is Dream of You<br>
-                      <!-- Finale<br> -->
                       Make 'Em Laugh<br>
                       Singin' in the Rain<br>
                       Would You?
@@ -620,7 +614,6 @@
                     <p>
                       <b>West Side Story</b><br>
                       Maria
-                      <!-- Tonight -->
                     </p>
                     <p>
                       <b>The Wizard of Oz</b><br>
@@ -638,31 +631,23 @@
                   </div>
                   <div class="accordion-content">
                     <p>
-                      <!-- Adagio in G Minor ∙ Albinoni<br> -->
                       Air on a G String ∙ Bach<br>
-                      <!-- Après un Rêve ∙ Fauré<br> -->
                       Bridal Chorus (“Here Comes the Bride”) ∙ Wagner<br>
                       Canon in D ∙ Pachelbel<br>
-                      <!-- Capriccio in C Minor ("Hommage à Paganini") ∙ Vieuxtemps<br> -->
-                      <!-- Clair de Lune ∙ Debussy<br> -->
-                      <!-- Estrellita ∙ Ponce<br> -->
+                      Estrellita ∙ Ponce<br>
                       Jesu, Joy of Man's Desiring ∙ Bach<br>
                       Gigue (Cello Suite No. 1) ∙ Bach<br>
                       Gigue (Cello Suite No. 3) ∙ Bach<br>
                       Gigue (Cello Suite No. 6) ∙ Bach<br>
                       Le Cygne (“The Swan”) ∙ Saint-Saëns<br>
-                      <!-- Meditation from Thaïs ∙ Massenet<br> -->
                       Nessun Dorma ∙ Puccini<br>
-                      <!-- Nocturne No. 2 ∙ Chopin<br> -->
                       O Mio Babbino Caro ∙ Puccini<br>
                       Prélude (Cello Suite No. 1) ∙ Bach<br>
                       Prélude (Cello Suite No. 3) ∙ Bach<br>
                       Prélude (Cello Suite No. 6) ∙ Bach<br>
-                      <!-- Romanze ∙ Bruch<br> -->
                       Salut d'Amour ("Love's Greeting") ∙ Elgar<br>
                       Träumerei (Kinderszenen) ∙ Schumann<br>
                       Wedding March ∙ Mendelssohn<br>
-                      <!-- Zigeunerweisen ∙ Sarasate -->
                     </p>
                   </div>
                 </div>
@@ -736,16 +721,16 @@
             </div>
 
             <div class="video reveal">
-              <p class="subheading">Bridal Chorus</p>
-              <video controls poster="/assets/imgs/7-portfolio/bridal-chorus.jpg">
-                <source src="/assets/imgs/7-portfolio/bridal-chorus.mp4">
+              <p class="subheading">Golden</p>
+              <video controls poster="/assets/imgs/7-portfolio/golden.jpg">
+                <source src="/assets/imgs/7-portfolio/golden.mp4">
               </video>
             </div>
 
             <div class="video reveal">
-              <p class="subheading">Golden</p>
-              <video controls poster="/assets/imgs/7-portfolio/golden.jpg">
-                <source src="/assets/imgs/7-portfolio/golden.mp4">
+              <p class="subheading">Bridal Chorus</p>
+              <video controls poster="/assets/imgs/7-portfolio/bridal-chorus.jpg">
+                <source src="/assets/imgs/7-portfolio/bridal-chorus.mp4">
               </video>
             </div>
 
@@ -777,8 +762,8 @@
                     </label>
                   </div>
                   <div class="accordion-content">
-                    <p>My hourly rates are posted <a  class="nav-services-1 inline" onclick="enableScroll()">above</a>, but your quote may vary from this based on a few factors, primarily the location of your venue and whether you have any custom song requests outside of my <a class="nav-music-4 inline" onclick="enableScroll()">repertoire</a>.</p>
-                    <p>To get a personalized quote, please don't hesitate to <a class="nav-contact-1 inline" onclick="enableScroll()">reach out</a>!</p>
+                    <p>My hourly rates are posted <a  class="nav-services-1 inline">above</a>, but your quote may vary from this based on a few factors, primarily the location of your venue and whether you have any custom song requests outside of my <a class="nav-music-4 inline">repertoire</a>.</p>
+                    <p>To get a personalized quote, please don't hesitate to <a class="nav-contact-1 inline">reach out</a>!</p>
                   </div>
                 </div>
                 <div class="accordion reveal">
@@ -871,7 +856,7 @@
                     </label>
                   </div>
                   <div class="accordion-content">
-                    <p>Yes! If you don't see what you're looking for in my <a  class="nav-music-3 inline" onclick="enableScroll()">repertoire</a>, I am always happy to learn something new. A small additional fee will apply.</p>
+                    <p>Yes! If you don't see what you're looking for in my <a  class="nav-music-3 inline">repertoire</a>, I am always happy to learn something new. A small additional fee will apply.</p>
                   </div>
                 </div>
                 <div class="accordion reveal">

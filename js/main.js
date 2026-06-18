@@ -200,7 +200,7 @@ nav11.addEventListener('click', function() {
 window.addEventListener("scroll", function() {
   var logomark = document.querySelector('.logomark');
   logomark.classList.toggle("active", window.scrollY > 600);
-})
+});
 
 
 
@@ -208,66 +208,17 @@ window.addEventListener("scroll", function() {
 // HAMBURGER MENU SCROLL PREVENTION
 // -----------------
 
-function preventDefaultForScrollKeys(e) {
-  if (keys[e.keyCode]) {
-    preventDefault(e);
-    return false;
-  }
-}
-
-// left: 37, up: 38, right: 39, down: 40,
-// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-var keys = {37: 1, 38: 1, 39: 1, 40: 1};
-
-function preventDefault(e) {
-  e.preventDefault();
-}
-
-function preventDefaultForScrollKeys(e) {
-    if (keys[e.keyCode]) {
-        preventDefault(e);
-        return false;
-    }
-}
-
-// modern Chrome requires { passive: false } when adding event
-var supportsPassive = false;
-try {
-  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-    get: function () { supportsPassive = true; } 
-  }));
-} catch(e) {}
-
-var wheelOpt = supportsPassive ? { passive: false } : false;
-var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
-
-
-var scrollEnabled = true;
-
-function toggleScroll() {
-  if (scrollEnabled) {
-    window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-    window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-    window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-    window.addEventListener('keydown', preventDefaultForScrollKeys, false);
-    scrollEnabled = false;
+document.getElementById("nav-menu").addEventListener("change", (e) => {
+  if (e.target.checked) {
+    lenis.stop();
   } else {
-    window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
-    window.removeEventListener('touchmove', preventDefault, wheelOpt);
-    window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-    scrollEnabled = true;
+    lenis.start();
   }
-}
+});
 
 function enableScroll() {
-  window.removeEventListener('DOMMouseScroll', preventDefault, false);
-  window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
-  window.removeEventListener('touchmove', preventDefault, wheelOpt);
-  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-  scrollEnabled = true;
+  lenis.start();
 }
-
 
 
 // -----------------
@@ -345,10 +296,12 @@ ticker.addEventListener("mouseleave", () => {
 // TESTIMONIAL TICKER
 // -----------------
 
-var copy = document.querySelector(".testimonial-container").cloneNode(true);
-document.querySelector(".testimonial-ticker").appendChild(copy);
-
 const container = document.querySelector(".testimonial-ticker");
+
+var copy = document.querySelector(".testimonial-container").cloneNode(true);
+var copyTwo = document.querySelector(".testimonial-container").cloneNode(true);
+container.appendChild(copy);
+container.appendChild(copyTwo);
 
 function onScroll() {
   const rect = container.getBoundingClientRect();
@@ -365,7 +318,7 @@ function onScroll() {
     container.scrollWidth - container.clientWidth;
 
   // Map vertical progress → horizontal movement
-  const translateX = -progress * maxTranslate;
+  const translateX = -1200 - progress * maxTranslate;
 
   container.style.transform = `translateX(${translateX}px)`;
 }
@@ -381,76 +334,103 @@ window.addEventListener("resize", onScroll);
 
 const reviews = [
   {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/yelp.png",
+    adPlatformLink: "https://www.yelp.com/biz/jeff-lu-glendora-13",
+    body: "We had an incredible experience with our violist Jeff at our wedding. From the very beginning, he was professional, flexible, and genuinely invested in making the music feel personal to us. Jeff went above and beyond by learning modern songs and even putting together K-pop mixes that meant a lot to us and our guests.\n\nThe performance itself was beautiful and created such a memorable atmosphere throughout the ceremony and reception. So many guests came up to us afterward asking about the music and complimenting how unique and elegant it felt.\n\nWhat we appreciated most was how collaborative he was throughout the process. He worked closely with us, listened to what we wanted, and made adjustments to ensure everything was perfect. You can tell he truly cares about his craft and about giving couples a special experience. The bridal entrance was perfectly executed with our favorite song.\n\nWe would absolutely recommend Jeff to anyone looking for a talented musician who can blend classical elegance with modern music in a way that feels fresh, personal, and unforgettable.",
+    note: "\nThis review has been edited for clarity.",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/george.jpg",
+    name: "George",
+    metadata: "May 2026 ∙ San Juan Capistrano"
+  },
+  {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
-    adPlatformLink: "https://share.google/Ypp3j0W9zhpxL3Kbz",
+    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
     body: "I hired Jeff to play at my daughter’s 15th birthday. Prior to the party, Jeff was very communicative and inquired on the type of music we’d like for him to perform. His professionalism is on another level. He was kind and arrived early to set up. His attire was perfect for the event and his demeanor was perfect as well. This was all prior to performing.\n\nJeff arrived ready to perform with a wireless speaker and his viola. The moment he began playing, my guests were blown away. I have received so many compliments on my party due to Jeff making it so special. My daughter was so excited to have him perform and he did not disappoint. We will hire Jeff for all our future events because we were beyond satisfied! Jeff has true talent, professionalism, presence, and is so kind.",
+    note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/vanessa.jpg",
     name: "Vanessa",
-    metadata: "Dec 2025 ∙ Fontana, CA"
+    metadata: "Dec 2025 ∙ Fontana"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
-    adPlatformLink: "https://www.zola.com/wedding-vendors/wedding-bands-djs/jeff-lu-violist",
-    body: "We hired Jeff Lu to perform at our wedding ceremony and cocktail hour, and he absolutely made those moments feel magical. From our first conversation, Jeff was easy to work with and responded quickly to every question we had. His talent on the viola is undeniable—he plays with a grace that our guests couldn't stop talking about. The music he chose created the perfect atmosphere without being distracting and elevated the whole vibe of our day. If you're looking for a musician who is both professional and genuinely passionate about what he does, Jeff is your person. We're so grateful he was part of our celebration.",
+    adPlatformLink: "https://www.zola.com/wedding-vendors/wedding-bands-djs/jefflumusic",
+    body: "We hired Jeff Lu to perform at our wedding ceremony and cocktail hour, and he absolutely made those moments feel magical. From our first conversation, Jeff was easy to work with and responded quickly to every question we had. His talent on the viola is undeniable—our guests couldn't stop talking about him. The music he chose created the perfect atmosphere, elevating the whole vibe of our day without being distracting. If you're looking for a musician who is both professional and genuinely passionate about what he does, Jeff is your person. We're so grateful he was part of our celebration.",
+    note: "\nThis review has been edited for clarity.",
     clientPhoto: "assets/imgs/4-testimonials/client-photos/anais.jpg",
     name: "Anais",
-    metadata: "May 2026 ∙ Simi Valley, CA"
-  },
-  {
-    adPlatform: "assets/imgs/4-testimonials/ad-platforms/the-bash.png",
-    adPlatformLink: "https://www.thebash.com/violin/jeff",
-    body: "Jeff was absolutely amazing. He took our taste in music into consideration, made a killer set list, seamlessly set up for the event, and gave a wonderful performance! He was very easy to communicate and coordinate with and is a talented violist. All of our guests thought he made the ambiance even more special and left a lasting impression on everyone. I would recommend Jeff for any event one would want to elevate the atmosphere for.",
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/giselle.jpg",
-    name: "Giselle",
-    metadata: "Oct 2025 ∙ Anaheim, CA"
-  },
-  {
-    adPlatform: "assets/imgs/4-testimonials/ad-platforms/gigsalad.png",
-    adPlatformLink: "https://www.gigsalad.com/jeff_lu_violist_glendora",
-    body: "Jeff Lu performed as a violist at our daughter’s wedding. Working with Jeff was an outstanding experience. He was not only prompt, but early. He performed beautifully, and was fully aware of and sensitive to the surroundings and occasion. His music was first class, and his demeanor and cheerful presence added a great deal to the ceremonies. I highly recommend Jeff for his viola skills to anyone needing music for their events.",
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/yu-fahn.jpg",
-    name: "Yu-Fahn",
-    metadata: "Sep 2025 ∙ Soquel, CA"
-  },
-  {
-    adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
-    adPlatformLink: "https://www.zola.com/wedding-vendors/wedding-bands-djs/jeff-lu-violist",
-    body: "We hired Jeff Lu to play violin at our daughter's quinceañera and couldn't have been happier with our choice. Even though it was his first quinceañera, Jeff brought such professionalism and elegance to the event that you would never have known it. He was willing to rehearse with an opera singer the same day, which showed how dedicated he was to making our celebration special. Jeff stayed responsive throughout our planning process and handled all our last-minute requests with a great attitude. He looked sharp, played beautifully, and connected with our guests in a way that made the whole day feel memorable. We're so grateful to Jeff for bringing such grace and care to our daughter's milestone.",
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/sarah.jpg",
-    name: "Sarah",
-    metadata: "May 2026 ∙ Fontana, CA"
+    metadata: "May 2026 ∙ Simi Valley"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
-    adPlatformLink: "https://share.google/Ypp3j0W9zhpxL3Kbz",
-    body: "Jeff was absolutely AMAZING!! He performed during the ceremony and cocktail hour of our wedding. His performance was beautiful, fun and entertaining for our guests. He was wonderful to work with throughout the whole planning process and communicated throughout the planning process. Our guests still talk about how amazing he was, we couldn't be happier! Highly recommend Jeff!",
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/haley.jpg",
-    name: "Haley",
-    metadata: "Apr 2026 ∙ Vista, CA"
-  },
-  {
-    adPlatform: "assets/imgs/4-testimonials/ad-platforms/yelp.png",
-    adPlatformLink: "https://www.yelp.com/biz/jeff-lu-wedding-and-event-violist-glendora-4?osq=Jeff+Lu",
-    body: "We hired Jeff to play viola for our wedding ceremony and cocktail hour and could not have been happier. He was responsive, flexible, and on top of every detail from start to finish. The highlight for our guests was a custom Top Gun Anthem cover for the bride's entrance that was exactly as cool as it sounds and a massive hit with everyone there. Highly recommend him for any wedding or event!",
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/drew.jpg",
-    name: "Drew",
-    metadata: "Apr 2026 ∙ Temecula, CA"
+    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
+    body: "Jeff was absolutely amazing. He took our taste in music into consideration, made a killer set list, seamlessly set up for the event, and gave a wonderful performance! He was very easy to communicate and coordinate with and is a talented violist. All of our guests thought he made the ambiance even more special and left a lasting impression on everyone. I would recommend Jeff for any event one would want to elevate the atmosphere for.",
+    note: null,
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/giselle.jpg",
+    name: "Giselle",
+    metadata: "Oct 2025 ∙ Anaheim"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
-    adPlatformLink: "https://www.zola.com/wedding-vendors/wedding-bands-djs/jeff-lu-violist",
-    body: "Jeff was wonderful and we highly recommend him! He's an amazing violist. My wife and I just got married very recently in May and Jeff played during our ceremony; he played beautifully. We even asked him to learn a new song for us that's totally foreign to him since it's not English. He nailed it! He's also very responsive to text and easy to communicate with. Thank you Jeff.",
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/lilet.jpg",
-    name: "Lilet",
-    metadata: "May 2026 ∙ Corona del Mar, CA"
+    adPlatformLink: "https://www.zola.com/wedding-vendors/wedding-bands-djs/jefflumusic",
+    body: "We hired Jeff Lu to play viola at our daughter's quinceañera and couldn't have been happier with our choice. Even though it was his first quinceañera, Jeff brought such professionalism and elegance to the event that you would never have known it. He was willing to rehearse with an opera singer the same day, which showed how dedicated he was to making our celebration special. Jeff stayed responsive throughout our planning process and handled all our last-minute requests with a great attitude. He looked sharp, played beautifully, and connected with our guests in a way that made the whole day feel memorable. We're so grateful to Jeff for bringing such grace and care to our daughter's milestone.",
+    note: "\nThis review has been edited for clarity.",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/sarah.jpg",
+    name: "Sarah",
+    metadata: "May 2026 ∙ Fontana"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
+    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
+    body: "Working with Jeff Lu Music was one of the best decisions we made for our wedding. From our first conversation through the big day, everything felt organized and seamless. Jeff went above and beyond during our ceremony—he learned a song that wasn't in his usual rotation because it was so important to us. He also provided recordings before our rehearsal so we could hear exactly how it would sound. The live music he played was flawless and made our ceremony feel intimate and personal. We can't recommend Jeff Lu Music enough.",
+    note: null,
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/alivia.jpg",
+    name: "Alivia",
+    metadata: "May 2026 ∙ Indian Wells"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
+    adPlatformLink: "https://www.zola.com/wedding-vendors/wedding-bands-djs/jefflumusic",
+    body: "Jeff Lu performed as a violist at our daughter’s wedding. Working with Jeff was an outstanding experience. He was not only prompt, but early. He performed beautifully, and was fully aware of and sensitive to the surroundings and occasion. His music was first class, and his demeanor and cheerful presence added a great deal to the ceremonies. I highly recommend Jeff for his viola skills to anyone needing music for their events.",
+    note: null,
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/yu-fahn.jpg",
+    name: "Yu-Fahn",
+    metadata: "Sep 2025 ∙ Soquel"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
+    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
+    body: "Jeff was absolutely AMAZING!! He performed during the ceremony and cocktail hour of our wedding. His performance was beautiful, fun and entertaining for our guests. He was wonderful to work with throughout the whole planning process and communicated throughout the planning process. Our guests still talk about how amazing he was, we couldn't be happier! Highly recommend Jeff!",
+    note: null,
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/haley.jpg",
+    name: "Haley",
+    metadata: "Apr 2026 ∙ Vista"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
+    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
+    body: "We hired Jeff to play viola for our wedding ceremony and cocktail hour and could not have been happier. He was responsive, flexible, and on top of every detail from start to finish. The highlight for our guests was a custom Top Gun Anthem cover for the bride's entrance that was exactly as cool as it sounds and a massive hit with everyone there. Highly recommend him for any wedding or event!",
+    note: null,
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/drew.jpg",
+    name: "Drew",
+    metadata: "Apr 2026 ∙ Temecula"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/yelp.png",
-    adPlatformLink: "https://www.yelp.com/biz/jeff-lu-wedding-and-event-violist-glendora-4?osq=Jeff+Lu",
+    adPlatformLink: "https://www.yelp.com/biz/jeff-lu-glendora-13",
+    body: "Jeff was wonderful and we highly recommend him! He's an amazing violist. My wife and I just got married very recently in May and Jeff played during our ceremony; he played beautifully. We even asked him to learn a new song for us that's totally foreign to him since it's not English. He nailed it! He's also very responsive to text and easy to communicate with. Thank you Jeff.",
+    note: null,
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/lilet.jpg",
+    name: "Lilet",
+    metadata: "May 2026 ∙ Corona del Mar"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/yelp.png",
+    adPlatformLink: "https://www.yelp.com/biz/jeff-lu-glendora-13",
     body: "I found him on The Bash and he was my first person I booked. I was hesitant at first because I've never used it nor has any of my friends used it before. It worked out in my favor. I booked Jeff for my wedding on 11/08/25 in Indian Wells. Prior before the wedding, we had excellent communication. He has so many songs to choose from that it makes it so hard to narrow it down. He was a hit during our dinner time. Would keep him in mind for other events.",
+    note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/mary.jpg",
     name: "Mary",
-    metadata: "Nov 2025 ∙ Indian Wells, CA"
+    metadata: "Nov 2025 ∙ Indian Wells"
   }
 ];
 
@@ -461,6 +441,7 @@ const info = document.querySelector(".info");
 const reviewAdPlatform = document.querySelector(".ad-platform");
 const reviewAdPlatformLink = document.querySelector(".ad-platform-link");
 const reviewBody = document.querySelector(".review-body");
+const reviewNote = document.querySelector(".review-note");
 const reviewName = document.querySelector(".review-name");
 const reviewClientPhoto = document.querySelector(".client-photo");
 const reviewMetadata = document.querySelector(".review-metadata");
@@ -474,10 +455,15 @@ function renderReviewNoAnimation(index) {
   reviewAdPlatform.src = reviews[index].adPlatform;
   reviewAdPlatformLink.href = reviews[index].adPlatformLink;
   reviewBody.textContent = reviews[index].body;
+  reviewNote.textContent = reviews[index].note ? reviews[index].note : "";
+  reviewNote.style.display = reviews[index].note ? "block" : "none";
   reviewName.textContent = reviews[index].name;
   reviewClientPhoto.src = reviews[index].clientPhoto;
   reviewMetadata.textContent = reviews[index].metadata;
-  reviewNumber.textContent = "0" + (index+1) + " / 0" + reviews.length;
+  reviewNumber.textContent =
+    String(index + 1).padStart(2, "0") +
+    " / " +
+    String(reviews.length).padStart(2, "0");
 }
 
 function renderReviewFromRight(index) {
@@ -494,10 +480,15 @@ function renderReviewFromRight(index) {
     reviewAdPlatform.src = reviews[index].adPlatform;
     reviewAdPlatformLink.href = reviews[index].adPlatformLink;
     reviewBody.textContent = reviews[index].body;
+    reviewNote.textContent = reviews[index].note ? reviews[index].note : "";
+    reviewNote.style.display = reviews[index].note ? "block" : "none";
     reviewName.textContent = reviews[index].name;
     reviewClientPhoto.src = reviews[index].clientPhoto;
     reviewMetadata.textContent = reviews[index].metadata;
-    reviewNumber.textContent = "0" + (index+1) + " / 0" + reviews.length;
+    reviewNumber.textContent =
+      String(index + 1).padStart(2, "0") +
+      " / " +
+      String(reviews.length).padStart(2, "0");
 
     // remove exit state
     review.classList.remove("left");
@@ -549,10 +540,15 @@ function renderReviewFromLeft(index) {
     reviewAdPlatform.src = reviews[index].adPlatform;
     reviewAdPlatformLink.href = reviews[index].adPlatformLink;
     reviewBody.textContent = reviews[index].body;
+    reviewNote.textContent = reviews[index].note ? reviews[index].note : "";
+    reviewNote.style.display = reviews[index].note ? "block" : "none";
     reviewName.textContent = reviews[index].name;
     reviewClientPhoto.src = reviews[index].clientPhoto;
     reviewMetadata.textContent = reviews[index].metadata;
-    reviewNumber.textContent = "0" + (index+1) + " / 0" + reviews.length;
+    reviewNumber.textContent =
+      String(index + 1).padStart(2, "0") +
+      " / " +
+      String(reviews.length).padStart(2, "0");
 
     // remove exit state
     review.classList.remove("right");
@@ -594,10 +590,12 @@ function openModal(index) {
   currentReview = index;
   renderReviewNoAnimation(currentReview);
   modal.classList.add("active");
+  lenis.stop();
 }
 
 function closeModal() {
   modal.classList.remove("active");
+  lenis.start();
 }
 
 document.querySelectorAll(".review-trigger").forEach(button => {

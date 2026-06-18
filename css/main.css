@@ -198,6 +198,10 @@ a {
   background-repeat: no-repeat;
 }
 
+.subheading .inline {
+  padding-bottom: 4px;
+}
+
 /* buttons */
 
 .button {
@@ -441,6 +445,10 @@ a {
  BIOGRAPHY
  ************/
 
+.bio .container {
+  padding-bottom: 13em;
+}
+
 .flex-half-image {
   display: flex;
   gap: 4rem;
@@ -498,7 +506,7 @@ a {
   background-image: url("/assets/imgs/4-testimonials/bg.jpg");
   background-size: cover;
   background-position: center;
-  padding: 8.5em 0;
+  padding: 7.5em 0 7em 0;
 }
 
 .review-badge {
@@ -506,11 +514,11 @@ a {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -67%);
   display: flex;
   align-items: center;
   gap: 1.75em;
-  padding: 0.375em 3.5em;
+  padding: 0.375em 3.25em;
 }
 
 .review-badge h2 {
@@ -530,7 +538,7 @@ a {
 .testimonial-ticker,
 .testimonial-container {
   display: flex;
-  gap: 5.5em;
+  gap: 5em;
 }
 
 .testimonial {
@@ -561,6 +569,10 @@ a {
 
 .stars i {
   font-size: 1.125rem;
+}
+
+html.modal-open {
+  overflow: hidden;
 }
 
 .modal {
@@ -657,13 +669,18 @@ a {
 }
 
 .review-body-container {
-  max-height: calc(100% - 5em);
-  /* overflow-y: scroll; */
+  max-height: calc(100% - 4.6em);
+  flex: 1;
+  overflow-y: scroll;
 }
 
-.review-body {
+.review-body,
+.review-note {
   white-space: pre-line;
-  text-overflow: ellipsis;
+}
+
+.review-note {
+  font-style: italic;
 }
 
 .info {
@@ -1345,6 +1362,7 @@ a {
   /* TESTIMONIALS: ditch ticker scrolling; convert to vertical layout */
   .testimonial-ticker {
     justify-content: center;
+    transform: translateX(0) !important;
   }
 
   .testimonial-container {
@@ -1352,7 +1370,8 @@ a {
     gap: 6em;
   }
 
-  .testimonial-container:nth-child(1) {
+  .testimonial-container:nth-child(1),
+  .testimonial-container:nth-child(2) {
     display: none;
   }
 
@@ -1442,6 +1461,7 @@ a {
     flex-direction: column;
     gap: 1.5em;
     justify-content: center;
+    align-items: center;
   }
 
   .flex-nav a {
