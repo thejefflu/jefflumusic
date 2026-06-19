@@ -91,11 +91,11 @@ section .container {
 .modal-content,
 .card img,
 .button {
-  border-radius: 0.25em;
+  border-radius: 0.1875em;
 }
 
 video {
-  clip-path: inset(0px round 0.25em);
+  clip-path: inset(0px round 0.1875em);
 }
 
 
@@ -748,7 +748,7 @@ html.modal-open {
 
 .cards {
   display: flex;
-  gap: 0.75em;
+  gap: 0.5em;
   margin-top: 1.25em;
   max-width: 100em;
 }
@@ -932,7 +932,7 @@ html.modal-open {
 .video-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.75em;
+  gap: 0.5em;
   row-gap: 2em;
   justify-content: space-between;
   padding-bottom: 6em;
