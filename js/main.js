@@ -340,7 +340,8 @@ const reviews = [
     note: "\nThis review has been edited for clarity.",
     clientPhoto: "assets/imgs/4-testimonials/client-photos/george.jpg",
     name: "George",
-    metadata: "May 2026 ∙ San Juan Capistrano"
+    metadata: "Groom ∙ May 2026"
+    // metadata: "May 2026 ∙ San Juan Capistrano"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -349,7 +350,8 @@ const reviews = [
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/vanessa.jpg",
     name: "Vanessa",
-    metadata: "Dec 2025 ∙ Fontana"
+    metadata: "Party Host ∙ Dec 2025"
+    // metadata: "Dec 2025 ∙ Fontana"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
@@ -358,7 +360,8 @@ const reviews = [
     note: "\nThis review has been edited for clarity.",
     clientPhoto: "assets/imgs/4-testimonials/client-photos/anais.jpg",
     name: "Anais",
-    metadata: "May 2026 ∙ Simi Valley"
+    metadata: "Bride ∙ May 2026"
+    // metadata: "May 2026 ∙ Simi Valley"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -367,7 +370,8 @@ const reviews = [
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/giselle.jpg",
     name: "Giselle",
-    metadata: "Oct 2025 ∙ Anaheim"
+    metadata: "Bride ∙ Oct 2025"
+    // metadata: "Oct 2025 ∙ Anaheim"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
@@ -376,7 +380,8 @@ const reviews = [
     note: "\nThis review has been edited for clarity.",
     clientPhoto: "assets/imgs/4-testimonials/client-photos/sarah.jpg",
     name: "Sarah",
-    metadata: "May 2026 ∙ Fontana"
+    metadata: "Party Host ∙ May 2026"
+    // metadata: "May 2026 ∙ Fontana"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -385,7 +390,8 @@ const reviews = [
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/alivia.jpg",
     name: "Alivia",
-    metadata: "May 2026 ∙ Indian Wells"
+    metadata: "Bride ∙ May 2026"
+    // metadata: "May 2026 ∙ Indian Wells"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
@@ -394,7 +400,8 @@ const reviews = [
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/yu-fahn.jpg",
     name: "Yu-Fahn",
-    metadata: "Sep 2025 ∙ Soquel"
+    metadata: "Father of the Bride ∙ Sep 2025"
+    // metadata: "Sep 2025 ∙ Soquel"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -403,7 +410,8 @@ const reviews = [
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/haley.jpg",
     name: "Haley",
-    metadata: "Apr 2026 ∙ Vista"
+    metadata: "Bride ∙ Apr 2026"
+    // metadata: "Apr 2026 ∙ Vista"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -412,7 +420,8 @@ const reviews = [
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/drew.jpg",
     name: "Drew",
-    metadata: "Apr 2026 ∙ Temecula"
+    metadata: "Groom ∙ Apr 2026"
+    // metadata: "Apr 2026 ∙ Temecula"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/yelp.png",
@@ -421,7 +430,8 @@ const reviews = [
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/lilet.jpg",
     name: "Lilet",
-    metadata: "May 2026 ∙ Corona del Mar"
+    metadata: "Bride ∙ May 2026"
+    // metadata: "May 2026 ∙ Corona del Mar"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/yelp.png",
@@ -430,7 +440,8 @@ const reviews = [
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/mary.jpg",
     name: "Mary",
-    metadata: "Nov 2025 ∙ Indian Wells"
+    metadata: "Bride ∙ Nov 2025"
+    // metadata: "Nov 2025 ∙ Indian Wells"
   }
 ];
 
