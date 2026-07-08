@@ -318,7 +318,7 @@ function onScroll() {
     container.scrollWidth - container.clientWidth;
 
   // Map vertical progress → horizontal movement
-  const translateX = -1200 - progress * maxTranslate;
+  const translateX = -1500 - progress * .75 * maxTranslate;
 
   container.style.transform = `translateX(${translateX}px)`;
 }
@@ -371,6 +371,16 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/giselle.jpg",
     name: "Giselle",
     metadata: "Bride ∙ Oct 2025"
+    // metadata: "Oct 2025 ∙ Anaheim"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
+    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
+    body: "Working with Jeff has been an incredible experience from start to finish. I reached out to commission a custom processional song for my wedding, and he truly brought my vision to life. He took the time to listen to exactly what I wanted, offered thoughtful suggestions that made the piece even better, and executed everything beautifully. His communication, creativity, and attention to detail made the entire process easy and enjoyable. I genuinely can’t wait to walk down the aisle to a song that feels so personal and meaningful. I highly recommend Jeff to anyone looking for a talented musician who cares deeply about creating something special.",
+    note: null,
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/taylor.jpg",
+    name: "Taylor",
+    metadata: "Bride ∙ Sep 2026"
     // metadata: "Oct 2025 ∙ Anaheim"
   },
   {
