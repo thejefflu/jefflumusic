@@ -384,6 +384,16 @@ const reviews = [
     // metadata: "Oct 2025 ∙ Anaheim"
   },
   {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
+    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
+    body: "We worked with Jeff and we are so happy that we found him! He was the best - so professional and easy to work with, great at communicating with us and keeping us updated. He was so helpful during the planning/music selection process. Super enjoyable experience and he was a hit at the wedding!!!!!!! He played beautifully and I lost count of how many guests commented on how beautifully he played.\nFinding a vendor/artist that can deliver your vision is a challenge, but finding someone who can deliver AND is a great person to collaborate with is the absolute best.\n\nJeff thank you so much for being so flexible and enjoyable to work with. We loved having you play on our special day!",
+    note: null,
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/jennifer.jpg",
+    name: "Jennifer",
+    metadata: "Bride ∙ Jun 2026"
+    // metadata: "Oct 2025 ∙ Anaheim"
+  },
+  {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
     adPlatformLink: "https://www.zola.com/wedding-vendors/wedding-bands-djs/jefflumusic",
     body: "We hired Jeff Lu to play viola at our daughter's quinceañera and couldn't have been happier with our choice. Even though it was his first quinceañera, Jeff brought such professionalism and elegance to the event that you would never have known it. He was willing to rehearse with an opera singer the same day, which showed how dedicated he was to making our celebration special. Jeff stayed responsive throughout our planning process and handled all our last-minute requests with a great attitude. He looked sharp, played beautifully, and connected with our guests in a way that made the whole day feel memorable. We're so grateful to Jeff for bringing such grace and care to our daughter's milestone.",
@@ -442,16 +452,6 @@ const reviews = [
     name: "Lilet",
     metadata: "Bride ∙ May 2026"
     // metadata: "May 2026 ∙ Corona del Mar"
-  },
-  {
-    adPlatform: "assets/imgs/4-testimonials/ad-platforms/yelp.png",
-    adPlatformLink: "https://www.yelp.com/biz/jeff-lu-glendora-13",
-    body: "I found him on The Bash and he was my first person I booked. I was hesitant at first because I've never used it nor has any of my friends used it before. It worked out in my favor. I booked Jeff for my wedding on 11/08/25 in Indian Wells. Prior before the wedding, we had excellent communication. He has so many songs to choose from that it makes it so hard to narrow it down. He was a hit during our dinner time. Would keep him in mind for other events.",
-    note: null,
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/mary.jpg",
-    name: "Mary",
-    metadata: "Bride ∙ Nov 2025"
-    // metadata: "Nov 2025 ∙ Indian Wells"
   }
 ];
 

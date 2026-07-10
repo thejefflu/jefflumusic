@@ -57,7 +57,7 @@ section {
 }
 
 section .container {
-  padding: 10em 0;
+  padding: 8.5em 0 10em 0;
 }
 
 .container.lg {
@@ -735,10 +735,6 @@ html.modal-open {
  SERVICES
  ************/
 
-.services .container {
-  padding-top: 9em;
-}
-
 .flex-cards {
   display: flex;
   gap: 9em;
@@ -939,7 +935,7 @@ html.modal-open {
   gap: 0.5em;
   row-gap: 2em;
   justify-content: space-between;
-  padding-bottom: 6em;
+  padding-bottom: 5em;
 }
 
 .video {
@@ -1007,6 +1003,7 @@ html.modal-open {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2em;
 }
 
 .socials {
