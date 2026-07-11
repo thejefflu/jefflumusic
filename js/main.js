@@ -318,7 +318,7 @@ function onScroll() {
     container.scrollWidth - container.clientWidth;
 
   // Map vertical progress → horizontal movement
-  const translateX = -1500 - progress * .75 * maxTranslate;
+  const translateX = -1750 - progress * .8 * maxTranslate;
 
   container.style.transform = `translateX(${translateX}px)`;
 }
