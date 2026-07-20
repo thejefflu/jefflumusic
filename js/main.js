@@ -340,7 +340,7 @@ const reviews = [
     note: "\nThis review has been edited for clarity.",
     clientPhoto: "assets/imgs/4-testimonials/client-photos/george.jpg",
     name: "George",
-    metadata: "Groom ∙ May 2026"
+    metadata: "Groom ∙ Jun 2026"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -349,7 +349,7 @@ const reviews = [
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/jennifer-temp.jpg",
     name: "Jennifer",
-    metadata: "Bride ∙ Jun 2026"
+    metadata: "Bride ∙ Jul 2026"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -385,7 +385,7 @@ const reviews = [
     note: "\nThis review has been edited for clarity.",
     clientPhoto: "assets/imgs/4-testimonials/client-photos/sarah.jpg",
     name: "Sarah",
-    metadata: "Party Host ∙ May 2026"
+    metadata: "Party Host ∙ Jun 2026"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -394,7 +394,7 @@ const reviews = [
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/taylor.jpg",
     name: "Taylor",
-    metadata: "Bride-to-be ∙ Sep 2026"
+    metadata: "Bride-to-be ∙ Jul 2026"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -412,7 +412,7 @@ const reviews = [
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/alivia.jpg",
     name: "Alivia",
-    metadata: "Bride ∙ May 2026"
+    metadata: "Bride ∙ Jun 2026"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -421,7 +421,7 @@ const reviews = [
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/haley.jpg",
     name: "Haley",
-    metadata: "Bride ∙ Apr 2026"
+    metadata: "Bride ∙ May 2026"
   }
 ];
 
