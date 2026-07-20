@@ -341,7 +341,6 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/george.jpg",
     name: "George",
     metadata: "Groom ∙ May 2026"
-    // metadata: "May 2026 ∙ San Juan Capistrano"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -351,7 +350,6 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/vanessa.jpg",
     name: "Vanessa",
     metadata: "Party Host ∙ Dec 2025"
-    // metadata: "Dec 2025 ∙ Fontana"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
@@ -361,7 +359,6 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/anais.jpg",
     name: "Anais",
     metadata: "Bride ∙ May 2026"
-    // metadata: "May 2026 ∙ Simi Valley"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -371,7 +368,6 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/giselle.jpg",
     name: "Giselle",
     metadata: "Bride ∙ Oct 2025"
-    // metadata: "Oct 2025 ∙ Anaheim"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -381,7 +377,6 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/taylor.jpg",
     name: "Taylor",
     metadata: "Bride ∙ Sep 2026"
-    // metadata: "Oct 2025 ∙ Anaheim"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -391,7 +386,6 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/jennifer.jpg",
     name: "Jennifer",
     metadata: "Bride ∙ Jun 2026"
-    // metadata: "Oct 2025 ∙ Anaheim"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
@@ -401,7 +395,6 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/sarah.jpg",
     name: "Sarah",
     metadata: "Party Host ∙ May 2026"
-    // metadata: "May 2026 ∙ Fontana"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -411,7 +404,15 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/alivia.jpg",
     name: "Alivia",
     metadata: "Bride ∙ May 2026"
-    // metadata: "May 2026 ∙ Indian Wells"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
+    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
+    body: "Jeff was absolutely amazing to work with. From our initial introduction, he was warm, welcoming, and incredibly helpful from start to finish. He was even able to accommodate last-minute changes for our big day, which made a world of difference.\n\nMy entire experience with Jeff was wonderful, and I never had any doubts or worries working with him. He answered every question I had and was so communicative throughout the entire process. He was professional, reliable, and truly a pleasure to work with.\n\nHis beautiful talent made our wedding day that much more special, and I would absolutely recommend him to anyone looking for an exceptional violinist.",
+    note: "\nThis review has been edited for clarity.",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/alexis.jpg",
+    name: "Alexis",
+    metadata: "Bride ∙ Jul 2026"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
@@ -421,7 +422,6 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/yu-fahn.jpg",
     name: "Yu-Fahn",
     metadata: "Father of the Bride ∙ Sep 2025"
-    // metadata: "Sep 2025 ∙ Soquel"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -431,7 +431,6 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/haley.jpg",
     name: "Haley",
     metadata: "Bride ∙ Apr 2026"
-    // metadata: "Apr 2026 ∙ Vista"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -441,7 +440,6 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/drew.jpg",
     name: "Drew",
     metadata: "Groom ∙ Apr 2026"
-    // metadata: "Apr 2026 ∙ Temecula"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/yelp.png",
@@ -451,7 +449,6 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/lilet.jpg",
     name: "Lilet",
     metadata: "Bride ∙ May 2026"
-    // metadata: "May 2026 ∙ Corona del Mar"
   }
 ];
 
