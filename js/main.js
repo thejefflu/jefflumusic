@@ -347,7 +347,7 @@ const reviews = [
     adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
     body: "We worked with Jeff and we are so happy that we found him! He was the best - so professional and easy to work with, great at communicating with us and keeping us updated. He was so helpful during the planning/music selection process. Super enjoyable experience and he was a hit at the wedding!!!!!!! He played beautifully and I lost count of how many guests commented on how beautifully he played.\nFinding a vendor/artist that can deliver your vision is a challenge, but finding someone who can deliver AND is a great person to collaborate with is the absolute best.\n\nJeff thank you so much for being so flexible and enjoyable to work with. We loved having you play on our special day!",
     note: null,
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/jennifer-temp.jpg",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/jennifer.jpg",
     name: "Jennifer",
     metadata: "Bride ∙ Jul 2026"
   },
