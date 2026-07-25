@@ -510,7 +510,7 @@ a {
   background-image: url("/assets/imgs/4-testimonials/bg.jpg");
   background-size: cover;
   background-position: center;
-  padding: 7.5em 0 7em 0;
+  padding: 7.5em 0;
 }
 
 .review-badge {
@@ -961,19 +961,18 @@ html.modal-open {
 .contact {
   width: 100%;
   max-width: 100%;
-  background-image: linear-gradient(270deg, rgba(43, 50, 56, 0.95) 35%, rgba(43, 50, 56, 0.05) 100%), url("/assets/imgs/8-contact/bg.jpg");
+  background-image: linear-gradient(90deg, rgba(43, 50, 56, 0.95) 0%, rgba(43, 50, 56, 0.85) 40%, rgba(43, 50, 56, 0.05) 75%), url("/assets/imgs/8-contact/bg.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .contact .container {
   display: flex;
-  justify-content: flex-end;
   padding: 8em 0 8.5em 0;
 }
 
 .contact .text-lockup {
-  margin-right: 8%;
+  margin-left: 8%;
   display: flex;
   flex-direction: column;
   gap: 3.5em;
@@ -1152,9 +1151,9 @@ html.modal-open {
     gap: 6em;
   }
 
-   /* CONTACT: text lockup shifts further right */
+   /* CONTACT: text lockup shifts further left */
   .contact .text-lockup {
-    margin-right: 4%;
+    margin-left: 4%;
   }
 }
 
@@ -1284,12 +1283,8 @@ html.modal-open {
 
   /* CONTACT: ditch gradient overlay and right-aligned layout */
   .contact {
-    background-image: linear-gradient(270deg, rgba(43, 50, 56, 0.95) 0%, rgba(43, 50, 56, 0.95) 100%), url("/assets/imgs/8-contact/bg.jpg");
-    background-position: 15% center;
-  }
-
-  .contact .container {
-    justify-content: flex-start;
+    background-image: linear-gradient(270deg, rgba(43, 50, 56, 0.95) 0%, rgba(43, 50, 56, 0.95) 100%), url("/assets/imgs/8-contact/bg-grayscale.jpg");
+    background-position: 85% center;
   }
 }
 
