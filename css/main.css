@@ -46,6 +46,7 @@ html, body {
 
 section {
   position: relative;
+  background-color: var(--bg);
 }
 
 /* TODO: further simplify code around containers and flexboxes in general */
@@ -510,6 +511,7 @@ a {
   background-image: url("/assets/imgs/4-testimonials/bg.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   padding: 7.5em 0;
 }
 

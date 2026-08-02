@@ -227,7 +227,7 @@ function enableScroll() {
 
 (function() {
   const fold = document.querySelector('.fold');
-  const speed = 0.2; // smaller = slower movement
+  const speed = 0.35; // smaller = slower movement
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
