@@ -235,6 +235,36 @@ function enableScroll() {
   });
 })();
 
+// window.addEventListener('scroll', function() {
+//   let scrollPos = window.pageYOffset;
+//   let target = document.querySelector('.contact-bg');
+//   target.style.backgroundPosition = `center ${scrollPos * 0.5}px`;
+// });
+
+const section = document.querySelector(".contact");
+const bg = document.querySelector(".contact-bg");
+
+function updateParallax() {
+  const rect = section.getBoundingClientRect();
+  const viewportHeight = window.innerHeight;
+
+  // 0 when the section enters the viewport,
+  // 1 when it has completely passed through
+  const progress = (viewportHeight - rect.top) / (viewportHeight + rect.height);
+
+  // Clamp between 0 and 1
+  const clamped = Math.max(0, Math.min(progress, 1));
+
+  // Move between -10% and +10%
+  const offset = (clamped - 0.5) * 20;
+
+  bg.style.backgroundPosition = `center ${offset * 50}px`;
+}
+
+window.addEventListener("scroll", updateParallax);
+window.addEventListener("resize", updateParallax);
+updateParallax();
+
 
 
 // -----------------
