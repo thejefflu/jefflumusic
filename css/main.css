@@ -86,6 +86,54 @@ section .container {
   translate: 0 0;
 }
 
+.reveal.second {
+  transition-delay: 0.1s;
+}
+
+.reveal.third {
+  transition-delay: 0.2s;
+}
+
+.reveal.fourth {
+  transition-delay: 0.3s;
+}
+
+.reveal.fifth {
+  transition-delay: 0.4s;
+}
+
+.reveal.sixth {
+  transition-delay: 0.5s;
+}
+
+.testimonial-container:nth-child(1) .reveal {
+  transition-delay: 0s;
+}
+
+.testimonial-container:nth-child(3) .reveal {
+  transition-delay: 0.6s;
+}
+
+.testimonial-container:nth-child(3) .reveal.second {
+  transition-delay: 0.7s;
+}
+
+.testimonial-container:nth-child(3) .reveal.third {
+  transition-delay: 0.8s;
+}
+
+.testimonial-container:nth-child(3) .reveal.fourth {
+  transition-delay: 0.9s;
+}
+
+.testimonial-container:nth-child(3) .reveal.fifth {
+  transition-delay: 1s;
+}
+
+.testimonial-container:nth-child(3) .reveal.sixth {
+  transition-delay: 1.1s;
+}
+
 .fold .container-image img,
 .bio img,
 .review-badge,
@@ -1187,6 +1235,16 @@ html.modal-open {
  ************/
 
 @media screen and (max-width: 75em) {
+  /* GLOBAL: remove second, third animation effect */
+  .reveal.second,
+  .reveal.third,
+  .reveal.fourth,
+  .reveal.fifth,
+  .reveal.sixth {
+    transition-delay: 0;
+  }
+
+
   /* FOLD: best of badges go away */
   .best-of {
     display: none;
@@ -1327,8 +1385,8 @@ html.modal-open {
     padding: 7em 0;
   }
 
-  .logo-ticker .container {
-    padding: 4em 0 3em 0;
+  .container-logos {
+    padding-bottom: 0;
   }
 
   .bio .container {
@@ -1399,8 +1457,8 @@ html.modal-open {
     gap: 6em;
   }
 
-  .testimonial-container:nth-child(1),
-  .testimonial-container:nth-child(2) {
+  .testimonial-container:nth-child(2),
+  .testimonial-container:nth-child(3) {
     display: none;
   }
 
