@@ -404,7 +404,7 @@ const reviews = [
     adPlatformLink: "https://www.zola.com/wedding-vendors/wedding-bands-djs/jefflumusic",
     body: "We hired Jeff Lu to perform at our wedding ceremony and cocktail hour, and he absolutely made those moments feel magical. From our first conversation, Jeff was easy to work with and responded quickly to every question we had. His talent on the viola is undeniable—our guests couldn't stop talking about him. The music he chose created the perfect atmosphere, elevating the whole vibe of our day without being distracting. If you're looking for a musician who is both professional and genuinely passionate about what he does, Jeff is your person. We're so grateful he was part of our celebration.",
     note: "\nThis review has been edited for clarity.",
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/anais-temp.jpg",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/anais.jpg",
     name: "Anais",
     metadata: "Bride ∙ May 2026"
   },
