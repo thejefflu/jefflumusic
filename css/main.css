@@ -818,7 +818,7 @@ html.modal-open {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  max-width: 43ch;
+  max-width: 39ch;
   justify-content: space-between;
   height: 100%;
 }
