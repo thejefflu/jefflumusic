@@ -375,6 +375,15 @@ const reviews = [
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
     adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
+    body: "We had the absolute PLEASURE of having Jeff Lu play viola at our wedding, and we couldn’t recommend him more! From the very beginning, Jeff was incredibly communicative, professional, and attentive. I had posted on FB and he commented, and I’m so glad he did. He was always on time with his promises and made the entire process so easy and stress-free for me which was major because I was moving the same week as my wedding!\n\nOne of our favorite parts was being able to completely customize the music for our seating period and processional. Jeff was so accommodating and brought our vision to life beautifully, he came fully prepared, dressed black tie, and thanked us personally. He even went above and beyond by learning our recessional song without us ever asking him to, which was such a thoughtful surprise that meant so much to my husband and me.\n\nHis playing added such a beautiful and emotional element to our ceremony. So many people complimented us. If you’re on the fence about live music, don’t be. Our guests absolutely loved it. If you’re looking for a talented, reliable, and genuinely thoughtful musician for your wedding, we highly recommend Jeff!",
+    note: null,
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/sandrine.jpg",
+    name: "Sandrine",
+    metadata: "Bride ∙ Aug 2026"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
+    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
     body: "We worked with Jeff and we are so happy that we found him! He was the best - so professional and easy to work with, great at communicating with us and keeping us updated. He was so helpful during the planning/music selection process. Super enjoyable experience and he was a hit at the wedding!!!!!!! He played beautifully and I lost count of how many guests commented on how beautifully he played.\nFinding a vendor/artist that can deliver your vision is a challenge, but finding someone who can deliver AND is a great person to collaborate with is the absolute best.\n\nJeff thank you so much for being so flexible and enjoyable to work with. We loved having you play on our special day!",
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/jennifer.jpg",
@@ -391,8 +400,8 @@ const reviews = [
     metadata: "Bride ∙ Jul 2026"
   },
   {
-    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
-    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
+    adPlatformLink: "https://www.zola.com/wedding-vendors/wedding-bands-djs/jefflumusic",
     body: "I hired Jeff to play at my daughter’s 15th birthday. Prior to the party, Jeff was very communicative and inquired on the type of music we’d like for him to perform. His professionalism is on another level. He was kind and arrived early to set up. His attire was perfect for the event and his demeanor was perfect as well. This was all prior to performing.\n\nJeff arrived ready to perform with a wireless speaker and his viola. The moment he began playing, my guests were blown away. I have received so many compliments on my party due to Jeff making it so special. My daughter was so excited to have him perform and he did not disappoint. We will hire Jeff for all our future events because we were beyond satisfied! Jeff has true talent, professionalism, presence, and is so kind.",
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/vanessa.jpg",
@@ -443,15 +452,6 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/alivia.jpg",
     name: "Alivia",
     metadata: "Bride ∙ Jun 2026"
-  },
-  {
-    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
-    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
-    body: "Jeff was absolutely AMAZING!! He performed during the ceremony and cocktail hour of our wedding. His performance was beautiful, fun and entertaining for our guests. He was wonderful to work with throughout the whole planning process and communicated throughout the planning process. Our guests still talk about how amazing he was, we couldn't be happier! Highly recommend Jeff!",
-    note: null,
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/haley.jpg",
-    name: "Haley",
-    metadata: "Bride ∙ May 2026"
   }
 ];
 
