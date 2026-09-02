@@ -348,7 +348,7 @@ function onScroll() {
     container.scrollWidth - container.clientWidth;
 
   // Map vertical progress → horizontal movement
-  const translateX = -1975 - progress * .8 * maxTranslate;
+  const translateX = -1500 - progress * .8 * maxTranslate;
 
   container.style.transform = `translateX(${translateX}px)`;
 }
@@ -391,15 +391,6 @@ const reviews = [
     metadata: "Bride ∙ Jul 2026"
   },
   {
-    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
-    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
-    body: "Jeff was absolutely amazing to work with. From our initial introduction, he was warm, welcoming, and incredibly helpful from start to finish. He was even able to accommodate last-minute changes for our big day, which made a world of difference.\n\nMy entire experience with Jeff was wonderful, and I never had any doubts or worries working with him. He answered every question I had and was so communicative throughout the entire process. He was professional, reliable, and truly a pleasure to work with.\n\nHis beautiful talent made our wedding day that much more special, and I would absolutely recommend him to anyone looking for an exceptional violist.",
-    note: "\nThis review has been edited for clarity.",
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/alexis-temp.jpg",
-    name: "Alexis",
-    metadata: "Bride ∙ Jul 2026"
-  },
-  {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
     adPlatformLink: "https://www.zola.com/wedding-vendors/wedding-bands-djs/jefflumusic",
     body: "I hired Jeff to play at my daughter’s 15th birthday. Prior to the party, Jeff was very communicative and inquired on the type of music we’d like for him to perform. His professionalism is on another level. He was kind and arrived early to set up. His attire was perfect for the event and his demeanor was perfect as well. This was all prior to performing.\n\nJeff arrived ready to perform with a wireless speaker and his viola. The moment he began playing, my guests were blown away. I have received so many compliments on my party due to Jeff making it so special. My daughter was so excited to have him perform and he did not disappoint. We will hire Jeff for all our future events because we were beyond satisfied! Jeff has true talent, professionalism, presence, and is so kind.",
@@ -407,6 +398,15 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/vanessa.jpg",
     name: "Vanessa",
     metadata: "Party Host ∙ Dec 2025"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
+    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
+    body: "Jeff was absolutely amazing to work with. From our initial introduction, he was warm, welcoming, and incredibly helpful from start to finish. He was even able to accommodate last-minute changes for our big day, which made a world of difference.\n\nMy entire experience with Jeff was wonderful, and I never had any doubts or worries working with him. He answered every question I had and was so communicative throughout the entire process. He was professional, reliable, and truly a pleasure to work with.\n\nHis beautiful talent made our wedding day that much more special, and I would absolutely recommend him to anyone looking for an exceptional violist.",
+    note: "\nThis review has been edited for clarity.",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/alexis-temp.jpg",
+    name: "Alexis",
+    metadata: "Bride ∙ Jul 2026"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
@@ -438,20 +438,20 @@ const reviews = [
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
     adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
-    body: "Jeff played the viola beautifully for my mom’s special birthday celebration! He even learned a ballad that was especially meaningful for her and our family. He was an absolute delight to work with - he was incredibly kind, responsive, and put together such a beautiful playlist to complement our event. Every song was played with such love and passion, and we received rave reviews from all our guests! I would hire him again in a heartbeat! I highly recommend!!!",
-    note: null,
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/estelle.jpg",
-    name: "Estelle",
-    metadata: "Party Host ∙ Jul 2026"
-  },
-  {
-    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
-    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
     body: "Working with Jeff Lu Music was one of the best decisions we made for our wedding. From our first conversation through the big day, everything felt organized and seamless. Jeff went above and beyond during our ceremony—he learned a song that wasn't in his usual rotation because it was so important to us. He also provided recordings before our rehearsal so we could hear exactly how it would sound. The live music he played was flawless and made our ceremony feel intimate and personal. We can't recommend Jeff Lu Music enough.",
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/alivia.jpg",
     name: "Alivia",
     metadata: "Bride ∙ Jun 2026"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
+    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
+    body: "Jeff played the viola beautifully for my mom’s special birthday celebration! He even learned a ballad that was especially meaningful for her and our family. He was an absolute delight to work with - he was incredibly kind, responsive, and put together such a beautiful playlist to complement our event. Every song was played with such love and passion, and we received rave reviews from all our guests! I would hire him again in a heartbeat! I highly recommend!!!",
+    note: null,
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/estelle.jpg",
+    name: "Estelle",
+    metadata: "Party Host ∙ Jul 2026"
   }
 ];
 
