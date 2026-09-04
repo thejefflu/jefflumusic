@@ -783,7 +783,7 @@ html.modal-open {
 
 .flex-cards {
   display: flex;
-  gap: 9em;
+  gap: 10em;
 }
 
 .flex-cards .text-lockup {
@@ -1048,7 +1048,7 @@ html.modal-open {
 }
 
 .contact .body {
-  max-width: 50ch;
+  max-width: 55ch;
   display: flex;
   flex-direction: column;
   gap: 1em;
