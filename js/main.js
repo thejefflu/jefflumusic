@@ -375,6 +375,15 @@ const reviews = [
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
     adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
+    body: "Hiring Jeff to play viola at our wedding was one of the best decisions we made for our special day. From my very first inquiry, he was professional, communicative, and incredibly accommodating. He kept in touch throughout the planning process, and I always felt like we were in great hands.\n\nWhen we met in person, he was just as wonderful as I expected. He is so personable and genuinely makes you feel comfortable right away. And of course, his talent speaks for itself, his music was beautiful from beginning to end.\n\nOne of the most special moments for me was walking down the aisle to “A Thousand Years” by Christina Perri. I had a very specific vision for how I wanted it to sound, and Jeff brought that vision to life perfectly. It was emotional, beautiful, and honestly everything I had imagined.\n\nOur guests couldn’t stop talking about the viola music and how elegant and classy it made the wedding feel. Jeff was also early and completely prepared, which meant so much on a day when there are already a million things happening.\n\nEverything about working with him was flawless. I would absolutely recommend Jeff to anyone looking for a talented, professional, and genuinely wonderful violist. I will definitely be hiring him for future events!",
+    note: "\nThis review has been edited for clarity.",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/danielle-temp.jpg",
+    name: "Danielle",
+    metadata: "Bride ∙ Sep 2026"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
+    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
     body: "We had the absolute PLEASURE of having Jeff Lu play viola at our wedding, and we couldn’t recommend him more! From the very beginning, Jeff was incredibly communicative, professional, and attentive. I had posted on FB and he commented, and I’m so glad he did. He was always on time with his promises and made the entire process so easy and stress-free for me which was major because I was moving the same week as my wedding!\n\nOne of our favorite parts was being able to completely customize the music for our seating period and processional. Jeff was so accommodating and brought our vision to life beautifully, he came fully prepared, dressed black tie, and thanked us personally. He even went above and beyond by learning our recessional song without us ever asking him to, which was such a thoughtful surprise that meant so much to my husband and me.\n\nHis playing added such a beautiful and emotional element to our ceremony. So many people complimented us. If you’re on the fence about live music, don’t be. Our guests absolutely loved it. If you’re looking for a talented, reliable, and genuinely thoughtful musician for your wedding, we highly recommend Jeff!",
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/sandrine.jpg",
@@ -431,9 +440,9 @@ const reviews = [
     adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
     body: "Working with Jeff has been an incredible experience from start to finish. I reached out to commission a custom processional song for my wedding, and he truly brought my vision to life. He took the time to listen to exactly what I wanted, offered thoughtful suggestions that made the piece even better, and executed everything beautifully. His communication, creativity, and attention to detail made the entire process easy and enjoyable. I genuinely can’t wait to walk down the aisle to a song that feels so personal and meaningful. I highly recommend Jeff to anyone looking for a talented musician who cares deeply about creating something special.",
     note: null,
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/taylor.jpg",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/taylor-temp.jpg",
     name: "Taylor",
-    metadata: "Bride-to-be ∙ Jul 2026"
+    metadata: "Bride ∙ Jul 2026"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -443,15 +452,6 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/alivia.jpg",
     name: "Alivia",
     metadata: "Bride ∙ Jun 2026"
-  },
-  {
-    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
-    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
-    body: "Jeff played the viola beautifully for my mom’s special birthday celebration! He even learned a ballad that was especially meaningful for her and our family. He was an absolute delight to work with - he was incredibly kind, responsive, and put together such a beautiful playlist to complement our event. Every song was played with such love and passion, and we received rave reviews from all our guests! I would hire him again in a heartbeat! I highly recommend!!!",
-    note: null,
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/estelle.jpg",
-    name: "Estelle",
-    metadata: "Party Host ∙ Jul 2026"
   }
 ];
 
