@@ -364,6 +364,15 @@ window.addEventListener("resize", onScroll);
 
 const reviews = [
   {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
+    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
+    body: "Hiring Jeff to play viola at our wedding was one of the best decisions we made for our special day. From my very first inquiry, he was professional, communicative, and incredibly accommodating. He kept in touch throughout the planning process, and I always felt like we were in great hands.\n\nWhen we met in person, he was just as wonderful as I expected. He is so personable and genuinely makes you feel comfortable right away. And of course, his talent speaks for itself, his music was beautiful from beginning to end.\n\nOne of the most special moments for me was walking down the aisle to “A Thousand Years” by Christina Perri. I had a very specific vision for how I wanted it to sound, and Jeff brought that vision to life perfectly. It was emotional, beautiful, and honestly everything I had imagined.\n\nOur guests couldn’t stop talking about the viola music and how elegant and classy it made the wedding feel. Jeff was also early and completely prepared, which meant so much on a day when there are already a million things happening.\n\nEverything about working with him was flawless. I would absolutely recommend Jeff to anyone looking for a talented, professional, and genuinely wonderful violist. I will definitely be hiring him for future events!",
+    note: "\nThis review has been edited for clarity.",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/danielle-temp.jpg",
+    name: "Danielle",
+    metadata: "Bride ∙ Sep 2026"
+  },
+  {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/yelp.png",
     adPlatformLink: "https://www.yelp.com/biz/jeff-lu-glendora-13",
     body: "We had an incredible experience with our violist Jeff at our wedding. From the very beginning, he was professional, flexible, and genuinely invested in making the music feel personal to us. Jeff went above and beyond by learning modern songs and even putting together K-pop mixes that meant a lot to us and our guests.\n\nThe performance itself was beautiful and created such a memorable atmosphere throughout the ceremony and reception. So many guests came up to us afterward asking about the music and complimenting how unique and elegant it felt.\n\nWhat we appreciated most was how collaborative he was throughout the process. He worked closely with us, listened to what we wanted, and made adjustments to ensure everything was perfect. You can tell he truly cares about his craft and about giving couples a special experience. The bridal entrance was perfectly executed with our favorite song.\n\nWe would absolutely recommend Jeff to anyone looking for a talented musician who can blend classical elegance with modern music in a way that feels fresh, personal, and unforgettable.",
@@ -375,29 +384,11 @@ const reviews = [
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
     adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
-    body: "Hiring Jeff to play viola at our wedding was one of the best decisions we made for our special day. From my very first inquiry, he was professional, communicative, and incredibly accommodating. He kept in touch throughout the planning process, and I always felt like we were in great hands.\n\nWhen we met in person, he was just as wonderful as I expected. He is so personable and genuinely makes you feel comfortable right away. And of course, his talent speaks for itself, his music was beautiful from beginning to end.\n\nOne of the most special moments for me was walking down the aisle to “A Thousand Years” by Christina Perri. I had a very specific vision for how I wanted it to sound, and Jeff brought that vision to life perfectly. It was emotional, beautiful, and honestly everything I had imagined.\n\nOur guests couldn’t stop talking about the viola music and how elegant and classy it made the wedding feel. Jeff was also early and completely prepared, which meant so much on a day when there are already a million things happening.\n\nEverything about working with him was flawless. I would absolutely recommend Jeff to anyone looking for a talented, professional, and genuinely wonderful violist. I will definitely be hiring him for future events!",
-    note: "\nThis review has been edited for clarity.",
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/danielle-temp.jpg",
-    name: "Danielle",
-    metadata: "Bride ∙ Sep 2026"
-  },
-  {
-    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
-    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
     body: "We had the absolute PLEASURE of having Jeff Lu play viola at our wedding, and we couldn’t recommend him more! From the very beginning, Jeff was incredibly communicative, professional, and attentive. I had posted on FB and he commented, and I’m so glad he did. He was always on time with his promises and made the entire process so easy and stress-free for me which was major because I was moving the same week as my wedding!\n\nOne of our favorite parts was being able to completely customize the music for our seating period and processional. Jeff was so accommodating and brought our vision to life beautifully, he came fully prepared, dressed black tie, and thanked us personally. He even went above and beyond by learning our recessional song without us ever asking him to, which was such a thoughtful surprise that meant so much to my husband and me.\n\nHis playing added such a beautiful and emotional element to our ceremony. So many people complimented us. If you’re on the fence about live music, don’t be. Our guests absolutely loved it. If you’re looking for a talented, reliable, and genuinely thoughtful musician for your wedding, we highly recommend Jeff!",
     note: null,
     clientPhoto: "assets/imgs/4-testimonials/client-photos/sandrine.jpg",
     name: "Sandrine",
     metadata: "Bride ∙ Aug 2026"
-  },
-  {
-    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
-    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
-    body: "We worked with Jeff and we are so happy that we found him! He was the best - so professional and easy to work with, great at communicating with us and keeping us updated. He was so helpful during the planning/music selection process. Super enjoyable experience and he was a hit at the wedding!!!!!!! He played beautifully and I lost count of how many guests commented on how beautifully he played.\nFinding a vendor/artist that can deliver your vision is a challenge, but finding someone who can deliver AND is a great person to collaborate with is the absolute best.\n\nJeff thank you so much for being so flexible and enjoyable to work with. We loved having you play on our special day!",
-    note: null,
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/jennifer.jpg",
-    name: "Jennifer",
-    metadata: "Bride ∙ Jul 2026"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/zola.png",
@@ -407,6 +398,15 @@ const reviews = [
     clientPhoto: "assets/imgs/4-testimonials/client-photos/vanessa.jpg",
     name: "Vanessa",
     metadata: "Party Host ∙ Dec 2025"
+  },
+  {
+    adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
+    adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
+    body: "We worked with Jeff and we are so happy that we found him! He was the best - so professional and easy to work with, great at communicating with us and keeping us updated. He was so helpful during the planning/music selection process. Super enjoyable experience and he was a hit at the wedding!!!!!!! He played beautifully and I lost count of how many guests commented on how beautifully he played.\nFinding a vendor/artist that can deliver your vision is a challenge, but finding someone who can deliver AND is a great person to collaborate with is the absolute best.\n\nJeff thank you so much for being so flexible and enjoyable to work with. We loved having you play on our special day!",
+    note: null,
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/jennifer.jpg",
+    name: "Jennifer",
+    metadata: "Bride ∙ Jul 2026"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
@@ -525,6 +525,8 @@ function renderReviewFromRight(index) {
     review.classList.add("right");
     info.classList.add("right");
     reviewNumber.classList.add("right");
+    var myDiv = document.querySelector('.review-body-container');
+    myDiv.scrollTop = 0;
 
     requestAnimationFrame(() => {
       // re-enable transition AFTER browser paints
@@ -585,6 +587,8 @@ function renderReviewFromLeft(index) {
     review.classList.add("left");
     info.classList.add("left");
     reviewNumber.classList.add("left");
+    var myDiv = document.querySelector('.review-body-container');
+    myDiv.scrollTop = 0;
 
     requestAnimationFrame(() => {
       // re-enable transition AFTER browser paints
