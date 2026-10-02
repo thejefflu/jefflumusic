@@ -614,6 +614,8 @@ function renderReviewFromLeft(index) {
 function openModal(index) {
   currentReview = index;
   renderReviewNoAnimation(currentReview);
+  var myDiv = document.querySelector('.review-body-container');
+  myDiv.scrollTop = 0;
   modal.classList.add("active");
   lenis.stop();
 }
