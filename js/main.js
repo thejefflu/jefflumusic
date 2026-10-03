@@ -368,7 +368,7 @@ const reviews = [
     adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
     body: "Hiring Jeff to play viola at our wedding was one of the best decisions we made for our special day. From my very first inquiry, he was professional, communicative, and incredibly accommodating. He kept in touch throughout the planning process, and I always felt like we were in great hands.\n\nWhen we met in person, he was just as wonderful as I expected. He is so personable and genuinely makes you feel comfortable right away. And of course, his talent speaks for itself, his music was beautiful from beginning to end.\n\nOne of the most special moments for me was walking down the aisle to “A Thousand Years” by Christina Perri. I had a very specific vision for how I wanted it to sound, and Jeff brought that vision to life perfectly. It was emotional, beautiful, and honestly everything I had imagined.\n\nOur guests couldn’t stop talking about the viola music and how elegant and classy it made the wedding feel. Jeff was also early and completely prepared, which meant so much on a day when there are already a million things happening.\n\nEverything about working with him was flawless. I would absolutely recommend Jeff to anyone looking for a talented, professional, and genuinely wonderful violist. I will definitely be hiring him for future events!",
     note: "\nThis review has been edited for clarity.",
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/danielle-temp.jpg",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/danielle.jpg",
     name: "Danielle",
     metadata: "Bride ∙ Sep 2026"
   },
