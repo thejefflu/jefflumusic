@@ -356,6 +356,7 @@ a {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: var(--ease-medium);
 
   display: flex;
   flex-direction: column;
@@ -1406,12 +1407,14 @@ html.modal-open {
   /* FOLD: reduce padding */
   .image-container {
     gap: 1.25em;
-    padding: 1.75em;
-    height: calc(100dvh - 8.5em);
+    padding: 0 0 2.5em 0;
+    height: calc(100dvh - 7.25em);
+    align-items: center;
   }
 
   .bullets {
     gap: 0.5em;
+    text-align: center;
   }
 
   /* BIO: half image module converts to vertical layout */
@@ -1441,7 +1444,7 @@ html.modal-open {
 
   .review-badge .text-lockup .subheading {
     text-wrap: wrap;
-    max-width: 12ch;
+    max-width: 13ch;
   }
 
   /* TESTIMONIALS: ditch ticker scrolling; convert to vertical layout */
