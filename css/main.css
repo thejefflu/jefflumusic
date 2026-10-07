@@ -126,7 +126,7 @@ section .container {
   transition-delay: 0.9s;
 }
 
-.fold .container-image img,
+.fold .image-container,
 .bio img,
 .review-badge,
 .modal-content,
@@ -156,20 +156,9 @@ h3 {
 
 h1 {
   text-transform: uppercase;
-  font-size: max(14vw, 14rem);
+  font-size: 10rem;
   letter-spacing: -8px;
-  word-spacing: 18vh;
-  text-align: center;
-  white-space: nowrap;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -55%);
-  width: 100%;
-
-  mix-blend-mode: color-burn;
-  color: #645A56;
+  line-height: 1;
 }
 
 h2 {
@@ -191,7 +180,7 @@ h3 {
 .subheading a,
 .button {
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   font-weight: 400;
 }
 
@@ -358,20 +347,21 @@ a {
  FOLD
  ************/
 
-.container-image {
+.image-container {
   margin-top: 3.5em;
-  height: calc(100dvh - 7em);
+  height: calc(100dvh - 9.875em);
   position: relative;
   overflow: hidden;
-}
+  background-image: linear-gradient(180deg, rgba(29, 33, 36, 0) 40%, rgba(29, 33, 36, 0.85) 80%,  rgba(29, 33, 36, 0.95) 100%), url("/assets/imgs/1-fold/fold-loop.mp4");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-/* TODO: make fully responsive */
-.fold img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 53% 35%;
-  transform: scale(1);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 2em;
+  padding: 2.5em 2.75em;
 }
 
 .cutout {
@@ -381,11 +371,21 @@ a {
   z-index: 1;
 }
 
+.bullets {
+  display: flex;
+  gap: 0.375em 0.75em;
+  flex-wrap: wrap;
+}
+
+/* .bullets p {
+  white-space: nowrap;
+} */
+
 .fold-text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 3.5em;
+  /* padding-bottom: 2.5em; */
 }
 
 .best-of {
@@ -503,7 +503,7 @@ a {
 .bio .text-lockup {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2.5rem;
   max-width: 68ch;
 }
 
@@ -560,7 +560,7 @@ a {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -67%);
+  transform: translate(-50%, -75%);
   display: flex;
   align-items: center;
   gap: 1.75em;
@@ -1021,7 +1021,7 @@ html.modal-open {
 }
 
 .contact-bg-overlay {
-  background-image: linear-gradient(90deg, rgba(43, 50, 56, 0.95) 0%, rgba(43, 50, 56, 0.85) 40%, rgba(43, 50, 56, 0.05) 75%);
+  background-image: linear-gradient(90deg, rgba(43, 50, 56, 0.95) 0%, rgba(43, 50, 56, 0.85) 40%, rgba(43, 50, 56, 0) 75%);
   background-size: cover;
   position: absolute;
   width: 100%;
@@ -1048,7 +1048,7 @@ html.modal-open {
 }
 
 .contact .body {
-  max-width: 55ch;
+  max-width: 70ch;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -1169,28 +1169,9 @@ html.modal-open {
  VERTICAL DEVICES
  ************/
 
-@media screen and (max-aspect-ratio: 7/6) {
-  /* h1 converts to editorial vertical layout */
-  h1 {
-    font-size: calc(34dvh - 7em);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    bottom: 1.2em;
-    left: -1.3em;
-    top: unset;
-    width: unset;
-    word-spacing: 0;
-    transition: var(--ease-medium);
-  }
-
-  /* FOLD: image shifts to accomodate h1 */
-  .fold .container-image,
-  .fold .container-image img {
-    transition: var(--ease-medium);
-  }
-
-  .fold .container-image img {
-    object-position: 53% 50%;
+@media screen and (max-aspect-ratio: 5/6) {
+  .image-container {
+    background-image: linear-gradient(180deg, rgba(29, 33, 36, 0) 40%, rgba(29, 33, 36, 0.85) 80%,  rgba(29, 33, 36, 0.95) 100%), url("/assets/imgs/1-fold/fold-loop-mobile.mp4");
   }
 }
 
@@ -1200,7 +1181,12 @@ html.modal-open {
  90EM BREAKPOINT
  ************/
 
-@media screen and (max-width: 90em) {
+@media screen and (max-width: 95em) {
+  /* FOLD: best of badges go away */
+  .best-of {
+    display: none;
+  }
+  
   /* SERVICES: cards and text lockup convert to vertical layout */
   .flex-cards {
     flex-direction: column;
@@ -1234,12 +1220,6 @@ html.modal-open {
   .reveal.fifth,
   .reveal.sixth {
     transition-delay: 0;
-  }
-
-
-  /* FOLD: best of badges go away */
-  .best-of {
-    display: none;
   }
 
   /* BIO: decreased gap between text lockup and photo */
@@ -1276,7 +1256,12 @@ html.modal-open {
  ************/
 
 @media screen and (max-width: 50em) {
-  /* TYPOGRAPHY: h2s responsively decrease in size */
+  /* TYPOGRAPHY: h1s, h2s responsively decrease in size */
+  h1 {
+    font-size: clamp(3rem, 20vw, 9rem);
+    letter-spacing: -4px;
+  }
+
   h2 {
     font-size: clamp(3rem, 12vw, 5.5rem);
     letter-spacing: -1.5px;
@@ -1284,6 +1269,16 @@ html.modal-open {
 
   .review-badge h2 {
     font-size: 5.5rem;
+  }
+
+  /* FOLD: turn bullets into vertical list */
+  .bullets {
+    flex-direction: column;
+    gap: 0.75em;
+  }
+
+  .bullet {
+    display: none;
   }
 
   /* BIO: container becomes full-width */
@@ -1408,6 +1403,17 @@ html.modal-open {
     font-size: 0.8125rem;
   }
 
+  /* FOLD: reduce padding */
+  .image-container {
+    gap: 1.25em;
+    padding: 1.75em;
+    height: calc(100dvh - 8.5em);
+  }
+
+  .bullets {
+    gap: 0.5em;
+  }
+
   /* BIO: half image module converts to vertical layout */
   .flex-half-image {
     flex-direction: column;
@@ -1491,23 +1497,7 @@ html.modal-open {
  ************/
 
 @media screen and (max-width: 35em) {
-  /* SERVICES: cards convert back to vertical layout */
-  .cards {
-    gap: 4em;
-  }
-
-  .card {
-    flex-direction: column;
-    gap: 1.5em;
-  }
-
-  .card img {
-    width: 100%;
-    aspect-ratio: 5/8;
-  }
-
   /* NAV: links convert to hamburger menu */
-
   /* TODO: make it so the nav bar expands downwards to form the fullscreen menu */
   .nav-links {
     position: absolute;
@@ -1640,6 +1630,21 @@ html.modal-open {
     -ms-user-select: auto; /* IE10+/Edge */
     user-select: auto; /* Standard */
     pointer-events: auto;
+  }
+
+  /* SERVICES: cards convert back to vertical layout */
+  .cards {
+    gap: 4em;
+  }
+
+  .card {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .card img {
+    width: 100%;
+    aspect-ratio: 5/8;
   }
 }
 
