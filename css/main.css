@@ -351,11 +351,11 @@ a {
   margin-top: 3.5em;
   height: calc(100dvh - 9.875em);
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden;
   background-image: linear-gradient(180deg, rgba(29, 33, 36, 0) 40%, rgba(29, 33, 36, 0.85) 80%,  rgba(29, 33, 36, 0.95) 100%), url("/assets/imgs/1-fold/fold-loop.mp4");
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   transition: var(--ease-medium);
 
   display: flex;
@@ -365,28 +365,41 @@ a {
   padding: 2.5em 2.75em;
 }
 
-.cutout {
+.image-container video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  left: 0;
+  top: 0;
+}
+
+.video-overlay {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
+  background: linear-gradient(180deg, rgba(29, 33, 36, 0) 40%, rgba(29, 33, 36, 0.85) 80%,  rgba(29, 33, 36, 0.95) 100%);
+}
+
+h1,
+.fold-text {
+  z-index: 2;
+}
+
+.fold-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .bullets {
   display: flex;
   gap: 0.375em 0.75em;
   flex-wrap: wrap;
-}
-
-/* .bullets p {
-  white-space: nowrap;
-} */
-
-.fold-text {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* padding-bottom: 2.5em; */
 }
 
 .best-of {
