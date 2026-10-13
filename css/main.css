@@ -127,6 +127,7 @@ section .container {
 }
 
 .fold .image-container,
+.fold .video-overlay,
 .bio img,
 .review-badge,
 .modal-content,
@@ -156,7 +157,7 @@ h3 {
 
 h1 {
   text-transform: uppercase;
-  font-size: 10rem;
+  font-size: 9rem;
   letter-spacing: -8px;
   line-height: 1;
 }
@@ -1195,7 +1196,7 @@ html.modal-open {
  90EM BREAKPOINT
  ************/
 
-@media screen and (max-width: 95em) {
+@media screen and (max-width: 90em) {
   /* FOLD: best of badges go away */
   .best-of {
     display: none;
@@ -1419,7 +1420,7 @@ html.modal-open {
 
   /* FOLD: reduce padding */
   .image-container {
-    gap: 1.25em;
+    gap: 1.5em;
     padding: 0 0 2.5em 0;
     height: calc(100dvh - 7.25em);
     align-items: center;
