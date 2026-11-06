@@ -440,7 +440,7 @@ const reviews = [
     adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
     body: "We feel so immensely thankful and blessed that Jeff was able to play at our cocktail hour. Other than being an amazing violist, he was such a joy to speak to and I'm so glad he was part of our special day. He let us choose the entire song list for the cocktail hour and even learned \"It's 5 o'clock somewhere\" as we requested. He played it exactly at 5:00 PM and it was such a joy to see everyone's faces light up when they realized what song was playing. I would recommend Jeff to anyone and everyone. I am trying to think of another event I could have so I could book him again! Please book him for your wedding! You won't regret it!! #1 Violist :)",
     note: null,
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/emma-temp.jpg",
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/emma.jpg",
     name: "Emma",
     metadata: "Bride ∙ Nov 2026"
   },
