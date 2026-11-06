@@ -438,11 +438,11 @@ const reviews = [
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
     adPlatformLink: "https://share.google/nbOKlWpMNAy7DfqIE",
-    body: "Working with Jeff has been an incredible experience from start to finish. I reached out to commission a custom processional song for my wedding, and he truly brought my vision to life. He took the time to listen to exactly what I wanted, offered thoughtful suggestions that made the piece even better, and executed everything beautifully. His communication, creativity, and attention to detail made the entire process easy and enjoyable. I genuinely can’t wait to walk down the aisle to a song that feels so personal and meaningful. I highly recommend Jeff to anyone looking for a talented musician who cares deeply about creating something special.",
+    body: "We feel so immensely thankful and blessed that Jeff was able to play at our cocktail hour. Other than being an amazing violist, he was such a joy to speak to and I'm so glad he was part of our special day. He let us choose the entire song list for the cocktail hour and even learned \"It's 5 o'clock somewhere\" as we requested. He played it exactly at 5:00 PM and it was such a joy to see everyone's faces light up when they realized what song was playing. I would recommend Jeff to anyone and everyone. I am trying to think of another event I could have so I could book him again! Please book him for your wedding! You won't regret it!! #1 Violist :)",
     note: null,
-    clientPhoto: "assets/imgs/4-testimonials/client-photos/taylor.jpg",
-    name: "Taylor",
-    metadata: "Bride ∙ Jul 2026"
+    clientPhoto: "assets/imgs/4-testimonials/client-photos/emma-temp.jpg",
+    name: "Emma",
+    metadata: "Bride ∙ Nov 2026"
   },
   {
     adPlatform: "assets/imgs/4-testimonials/ad-platforms/google.png",
